@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 // import { withRouter } from 'react-router-dom'
 import Navbar from '../Navbar/Navbar';
+import './Login.css';
+
 
 class LoginPage extends Component {
     
@@ -9,21 +11,17 @@ class LoginPage extends Component {
         return (
             <div className="body">
             <h1>LoginPage</h1>
+            <br></br>
+            <br></br>
             <div className="Form">
-            <label>FirstName:</label>
-            <input type="text" name="Firstname "/>
-            <label>LastName:</label>
+            <label>E-mail : </label>
             <input type="text" />
-            <label> Password:</label>
-            <input type="text" />
-            <label>Confirm Password:</label>
-            <input type="text" />
-            <label>E-mail:</label>
-            <input type="text" name="Firstname "/>
-            <label>Phone:</label>
-            <input type="text" /> </div>
-            <button>Submit</button>
-            
+            <br></br>
+            <br></br>
+            <label> Password :</label>
+            <input type="text" /></div>
+            <br></br>
+             <button>Submit</button>
             </div>
             );
             }

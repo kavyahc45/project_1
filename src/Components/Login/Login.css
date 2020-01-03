@@ -1,14 +1,10 @@
-.Form{
-    display: grid;
-    grid-template-columns: 400px 400px;
-    grid-template-rows: 30px 30px 30px 30px 30px 30px ;
-    grid-row-gap: 20px;
-    margin-left: 40px;
-    }
+
     .body{
-    background-image: url(../image/Rmclogo.jpg);
+        background-color: rgb(84, 103, 141);
+        
+   
     }
-    button{
+    .button{
     margin-top: 30px;
-    
+   
     }
