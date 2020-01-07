@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
+// import BrowerHistory from '../../Utils/BrowerHestory';
+import './System.css';
 
 
 class System extends Component {
+//     onClickhandel(){
+        
+//   BrowerHistory.push('/account');
+//     }
+
+    
     render() {
         return (
             <div class="add">
                 <h1> Account list page</h1>
-                <div class="ser">
-            <input type="text" placeholder="search"></input>
-            </div>
-                <br></br>
-                <br></br>
-                <div class="cer">
-                <button><a href="/Accountpage">create a new account</a></button> 
+                <div >
+            <input class="ser" type="text" placeholder="search"></input>
+           
+                <button  class="cer"><a href="/Account" >Create New Account</a></button>
+                
+                {/* <button onClick={this.onClickhandel()}>create a new account</button>  */}
                 </div>
             </div>
         );

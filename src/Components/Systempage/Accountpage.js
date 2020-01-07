@@ -4,25 +4,26 @@ class Accountpage extends Component {
     render() {
         return (
             <div>
-                User Account Page
+               <h1>User Account Page</h1>
                 <div>
-                <table className="acc">
-  <tr>
+                <table class="table table-bordered">
+                <thead> 
+                  <tr>   
     <th>Account Name</th>
     <th >Date</th>
-    
-  </tr>
+    </tr>
+    </thead> 
+    <tbody>
   <tr>
     <td>Kavya</td>
     <td>2-1-2020</td>
   </tr>
  
-  <tr>
-    <button> Plan </button>
-    <button> Prodect </button>
-  </tr>
- 
+  
+ </tbody>
 </table>
+<button > Plan </button>
+    <button> Prodect </button>
                 </div>
             </div>
         );
@@ -30,3 +31,7 @@ class Accountpage extends Component {
 }
 
 export default Accountpage;
+
+
+
+

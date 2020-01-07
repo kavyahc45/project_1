@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-import BrowerHistory from '../../Utils/BrowerHestory';
-import './Sign.css';
+import './LoginForm.css'
 
-class SignupPage extends Component {
-  onHandleClick(){
-    BrowerHistory.push('./Login');
-  }
-
-
+class LoginForm extends Component {
     constructor() {
         super();
         this.state = {
@@ -33,7 +27,7 @@ class SignupPage extends Component {
         e.preventDefault();
         if (this.validateForm()) {
             let fields = {};
-            fields["username"] = "";
+           
             fields["emailid"] = "";
             
             fields["password"] = "";
@@ -49,17 +43,17 @@ class SignupPage extends Component {
         let errors = {};
         let formIsValid = true;
   
-        if (!fields["username"]) {
-          formIsValid = false;
-          errors["username"] = "*Please enter your username.";
-        }
+        // if (!fields["username"]) {
+        //   formIsValid = false;
+        //   errors["username"] = "*Please enter your username.";
+        // }
   
-        if (typeof fields["username"] !== "undefined") {
-          if (!fields["username"].match(/^[a-zA-Z ]*$/)) {
-            formIsValid = false;
-            errors["username"] = "*Please enter alphabet characters only.";
-          }
-        }
+        // if (typeof fields["username"] !== "undefined") {
+        //   if (!fields["username"].match(/^[a-zA-Z ]*$/)) {
+        //     formIsValid = false;
+        //     errors["username"] = "*Please enter alphabet characters only.";
+        //   }
+        // }
   
         if (!fields["emailid"]) {
           formIsValid = false;
@@ -98,34 +92,31 @@ class SignupPage extends Component {
         });
         return formIsValid;
     }
-  
     render() {
         return (
             <div id="main-registration-container">
-     <div id="register">
-        <h3>SignUp</h3>
-        <form method="post"  name="userRegistrationForm"  onSubmit= {this.submituserRegistrationForm} >
-       
-        <label>Name</label>
-        <input type="text" name="username" value={this.state.fields.username} onChange={this.handleChange} />
-        <div className="errorMsg">{this.state.errors.username}</div>
-        
-        <label>Email ID:</label>
-        <input type="text" name="emailid" value={this.state.fields.emailid} onChange={this.handleChange}  />
-        <div className="errorMsg">{this.state.errors.emailid}</div>
-       
-        <label>Password</label>
-        <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange} />
-        <div className="errorMsg">{this.state.errors.password}</div>
-        {/* <input  type="submit" className="button"  value="Signin"/> */}
-        <input type="submit" onClick={this.onHandleClick} className="button" value="Signup"/>        
+            <div id="register">
+               <h3>Login</h3>
+               <form method="post"  name="userRegistrationForm"  onSubmit= {this.submituserRegistrationForm} >
+              
+               {/* <label>Name</label>
+               <input type="text" name="username" value={this.state.fields.username} onChange={this.handleChange} />
+               <div className="errorMsg">{this.state.errors.username}</div>
+                */}
+               <label>Email ID:</label>
+               <input type="text" name="emailid" value={this.state.fields.emailid} onChange={this.handleChange}  />
+               <div className="errorMsg">{this.state.errors.emailid}</div>
+              
+               <label>Password</label>
+               <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange} />
+               <div className="errorMsg">{this.state.errors.password}</div>
+               <input type="submit" className="button"  value="Login"/>
+               {/* <input type="submit" onClick={this.onHandleClick} className="button" value="Signup"/> */}
+               </form>
+           </div>
+           </div>
+               );
+           }
+       }
 
-       
-        </form>
-    </div>
-    </div>
-        );
-    }
-}
-
-export default SignupPage;
+export default LoginForm;
