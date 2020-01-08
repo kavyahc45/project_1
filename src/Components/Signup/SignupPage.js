@@ -106,20 +106,19 @@ class SignupPage extends Component {
         <h3>SignUp</h3>
         <form method="post"  name="userRegistrationForm"  onSubmit= {this.submituserRegistrationForm} >
        
-        <label>Name</label>
+        <label>UserName</label>
         <input type="text" name="username" value={this.state.fields.username} onChange={this.handleChange} />
         <div className="errorMsg">{this.state.errors.username}</div>
         
-        <label>Email ID:</label>
+        <label>Email ID</label>
         <input type="text" name="emailid" value={this.state.fields.emailid} onChange={this.handleChange}  />
         <div className="errorMsg">{this.state.errors.emailid}</div>
        
         <label>Password</label>
         <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange} />
         <div className="errorMsg">{this.state.errors.password}</div>
-        {/* <input  type="submit" className="button"  value="Signin"/> */}
-        <input type="submit" onClick={this.onHandleClick} className="button" value="Signup"/>        
-
+<button  onClick={this.onHandleClick} className="button" >Signin</button>
+        
        
         </form>
     </div>

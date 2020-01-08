@@ -2,11 +2,15 @@
     color: blue;
     margin-top: 50px;
     margin-bottom: 100px;
+    background-color: rgb(118, 146, 118);
 }
 .ser{
     margin-top: 100px;
     margin-right: 500px;
     color: blue;
+}
+.new{
+    background-color: lightseagreen;
 }
 .cer{
     
@@ -14,6 +18,7 @@
     margin-left: 500px;
      color: blue;
 }
-body{
-    color: rgb(189, 126, 44);
-} 
+.plan{
+    margin-right: 20px;
+    background-color: lightseagreen;
+}

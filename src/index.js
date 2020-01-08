@@ -18,13 +18,13 @@ serviceWorker.unregister();
 
 // import { Provider } from 'react-redux';
 // import store from './Reducers/Store';
-// // import LoginForm from './Components/LoginForm/LoginForm';
-// // import SignupPage from './Components/Signup/SignupPage';
+// import LoginForm from './Components/LoginForm/LoginForm';
+// import SignupPage from './Components/Signup/SignupPage';
 
 // ReactDOM.render(
 //   <Provider store={store}>
-//    {/* <LoginForm/> 
-//    <SignupPage/> */}
+//    <LoginForm/> 
+//    <SignupPage/>
 //   </Provider>,
 //   document.getElementById('root')
 // );

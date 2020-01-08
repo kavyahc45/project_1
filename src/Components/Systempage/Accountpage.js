@@ -1,30 +1,16 @@
 import React, { Component } from 'react';
+import BrowerHistory from '../../Utils/BrowerHestory';
 
 class Accountpage extends Component {
+  onClickhandel(){
+        
+    BrowerHistory.push('/Gen_inform');
+      }
+
     render() {
         return (
             <div>
-               <h1>User Account Page</h1>
-                <div>
-                <table class="table table-bordered">
-                <thead> 
-                  <tr>   
-    <th>Account Name</th>
-    <th >Date</th>
-    </tr>
-    </thead> 
-    <tbody>
-  <tr>
-    <td>Kavya</td>
-    <td>2-1-2020</td>
-  </tr>
- 
-  
- </tbody>
-</table>
-<button > Plan </button>
-    <button> Prodect </button>
-                </div>
+               <h1>Create User Account </h1>             
             </div>
         );
     }

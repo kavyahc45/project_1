@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './LoginForm.css'
+import BrowerHistory from '../../Utils/BrowerHestory';
 
 class LoginForm extends Component {
     constructor() {
@@ -43,17 +44,8 @@ class LoginForm extends Component {
         let errors = {};
         let formIsValid = true;
   
-        // if (!fields["username"]) {
-        //   formIsValid = false;
-        //   errors["username"] = "*Please enter your username.";
-        // }
-  
-        // if (typeof fields["username"] !== "undefined") {
-        //   if (!fields["username"].match(/^[a-zA-Z ]*$/)) {
-        //     formIsValid = false;
-        //     errors["username"] = "*Please enter alphabet characters only.";
-        //   }
-        // }
+        
+        
   
         if (!fields["emailid"]) {
           formIsValid = false;
@@ -92,6 +84,12 @@ class LoginForm extends Component {
         });
         return formIsValid;
     }
+    onHandleClick(){
+      BrowerHistory.push('./Navbar');
+    }
+  
+
+
     render() {
         return (
             <div id="main-registration-container">
@@ -103,14 +101,15 @@ class LoginForm extends Component {
                <input type="text" name="username" value={this.state.fields.username} onChange={this.handleChange} />
                <div className="errorMsg">{this.state.errors.username}</div>
                 */}
-               <label>Email ID:</label>
+               <label>Email ID</label>
                <input type="text" name="emailid" value={this.state.fields.emailid} onChange={this.handleChange}  />
                <div className="errorMsg">{this.state.errors.emailid}</div>
               
                <label>Password</label>
                <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange} />
                <div className="errorMsg">{this.state.errors.password}</div>
-               <input type="submit" className="button"  value="Login"/>
+               <button onClick={this.onHandleClick} className="button">Login</button>
+               {/* <input type="submit" className="button"  value="Login"/> */}
                {/* <input type="submit" onClick={this.onHandleClick} className="button" value="Signup"/> */}
                </form>
            </div>
