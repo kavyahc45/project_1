@@ -26,12 +26,12 @@ class Navbar extends Component {
                   <div className="bar3"></div>
                 </div>
                 <div className="col-xs-11 col-sm-11 col-md-11 col-lg-11" style={{background:'green'}} >
-                <a  className="nav1" onClick={this.onHandleClick} >System</a>
+                <a  className="nav1" onClick={this.onHandleClick} >System Get Started</a>
                 <a className="nav1" >Gallery</a>
                 <a className="nav1" >Name:</a>
                 </div>
                 <div class="sys" >
-                <a onClick={this.onHandleClick} >System</a>
+                <a onClick={this.onHandleClick} >System Get Started</a>
                      </div>
                     <div class="gal">
                     <a  >Gallery</a>

@@ -5,22 +5,35 @@ import { Button } from 'react-bootstrap';
 
 
 class System extends Component {
-  onHandleClick(){
-        
-  BrowerHistory.push('/Product');
+  
+  onHandleClick_create(){
+    BrowerHistory.push('/account');
+}
+
+  
+  onHandleClick_product() {
+        BrowerHistory.push('/Product');
     }
 
+
+    onHandleClick_plan(){ 
+         BrowerHistory.push('/plan');
+        }
+
+   
+
+       
     
     render() {
         return (
             <div class="add">
-              <h2> Account list page</h2>
+              <h2> Account list </h2>
                 <div >
             <input class="ser" type="text" placeholder="search"></input>
            
-                {/* <button  class="cer"><a href="/Account" >Create New Account</a></button> */}
+                {/* <button  class="cer"><a href="/Account">Create New Account</a></button> */}
                 
-                <button class="new">create a new account</button> 
+                <button class="new" onClick={this.onHandleClick_create}>create a new account</button> 
                 </div>
                 <br></br>
                 <br></br>
@@ -28,16 +41,16 @@ class System extends Component {
                 <div>
                <h4>User Account List</h4>
                 <div >
-                <table class="table table-bordered" >
+                <table class="table table-bordered">
                 <thead> 
                   <tr>   
     <th>Account Name</th>
     <th >Date</th>
     <th>Action
       <br></br>
-      <button class="plan" onClick={this.onHandleClick}>Account Edit</button>
-    <button  class="plan" onClick={this.onHandleClick}>Create Plan </button>
-    <button  class="plan"onClick={this.onHandleClick}>Create Prodect </button></th>
+      <button class="plan">Account Edit</button>
+    <button  class="plan" onClick={this.onHandleClick_plan}>Create Plan </button>
+    <button  class="plan"onClick={this.onHandleClick_product}>Create Prodect </button></th>
     </tr>
     </thead> 
     <tbody>
@@ -45,9 +58,12 @@ class System extends Component {
     <td>Kavya</td>
     <td>2-1-2020</td>
    
-    
-    
-  </tr>
+ </tr>
+ <tr>
+    <td>Vasavi</td>
+    <td>2-1-2020</td>
+   
+ </tr>
  <tr>
  <td>vandana</td>
  <td>2-1-2020</td>
@@ -73,7 +89,7 @@ class System extends Component {
                 </div>
             </div>
             </div>
-            {/* <button>Next Page</button> */}
+           
             </div>
         );
     }
