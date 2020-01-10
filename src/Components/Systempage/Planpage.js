@@ -3,7 +3,7 @@ import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 class Planpage extends Component {
     render() {
         return (
-            <div>
+            <div className="prod">
                  <h2>PLAN INFORMATION </h2>
                  <br></br><br></br>
                  <Button color="primary" id="toggler1" style={{ marginBottom: '1rem' }}>
@@ -23,14 +23,15 @@ class Planpage extends Component {
   <option value="" disabled selected>select</option>
   <option value="1">Life incureance</option>
   <option value="2">Health incureance</option>
-  <option value="3">property incureance</option>
+  <option value="3">Property incureance</option>
 </select>
       </div>
       <div class="col">
       <label>Plan Type</label>
       <select class="mdb-select md-form">
   <option value="" disabled selected>select</option>
-  <option value="1">Life incureance</option>
+  <option value="1">Health plane</option>
+  <option value="1">Poperty plane</option>
   </select>
       </div>
     </div>
@@ -59,7 +60,10 @@ class Planpage extends Component {
       <label>Origination Reason</label>
       <select class="mdb-select md-form">
   <option value="" disabled selected>select</option>
-  <option value="1">Life incureance</option>
+  <option value="1">Learning Objectives</option>
+  <option value="1">Reciprocal or Inter-Insurance Exchanges</option>
+  <option value="1">Types of Mutual Companies</option>
+  <option value="1">Selecting the form of Organization</option>
   </select>
       </div>
       
@@ -167,7 +171,8 @@ class Planpage extends Component {
 </Card>
 </UncontrolledCollapse>
    </div>
-
+   <br></br><br></br>
+                <button class="plan">Save</button> 
 
             </div>
         );

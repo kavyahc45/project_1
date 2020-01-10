@@ -6,7 +6,7 @@ import './prod.css';
 class Productpage extends Component {
     render() {
         return (
-            <div>
+            <div className="prod">
                  <h2>PRODUCT INFORMATION </h2>
                  <br></br><br></br>
                  <Button color="primary" id="toggler1" style={{ marginBottom: '1rem' }}>
@@ -23,9 +23,10 @@ class Productpage extends Component {
       <label>Products Type</label>
       <select class="mdb-select md-form">
   <option value="" disabled selected>select</option>
-  <option value="1">Life incureance</option>
-  <option value="2">Health incureance</option>
-  <option value="3">property incureance</option>
+  <option value="1">Commission Amount</option>
+  <option value="2">Premium Paying Term</option>
+  <option value="3">Upfront Commission (1st Year)</option>
+  <option value="3">Trail Commission (2nd & 3rd yr)</option>
 </select>
       </div>
       <div class="col">
@@ -180,7 +181,8 @@ class Productpage extends Component {
 </UncontrolledCollapse>
    </div>
 
-
+   <br></br><br></br>
+                <button class="plan">Save</button> 
             </div>
         );
     }

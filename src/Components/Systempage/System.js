@@ -7,7 +7,7 @@ import { Button } from 'react-bootstrap';
 class System extends Component {
   
   onHandleClick_create(){
-    BrowerHistory.push('/account');
+    BrowerHistory.push('/account_inf');
 }
 
   
@@ -30,10 +30,7 @@ class System extends Component {
               <h2> Account list </h2>
                 <div >
             <input class="ser" type="text" placeholder="search"></input>
-           
-                {/* <button  class="cer"><a href="/Account">Create New Account</a></button> */}
-                
-                <button class="new" onClick={this.onHandleClick_create}>create a new account</button> 
+            <button class="new" onClick={this.onHandleClick_create}>Create a new account</button> 
                 </div>
                 <br></br>
                 <br></br>
@@ -45,15 +42,15 @@ class System extends Component {
                 <thead> 
                   <tr>   
     <th>Account Name</th>
-    <th >Date</th>
-    <th>Action
+      <th >Date</th>
+      <th>Action
       <br></br>
       <button class="plan">Account Edit</button>
-    <button  class="plan" onClick={this.onHandleClick_plan}>Create Plan </button>
-    <button  class="plan"onClick={this.onHandleClick_product}>Create Prodect </button></th>
-    </tr>
-    </thead> 
-    <tbody>
+       <button  class="plan" onClick={this.onHandleClick_plan}>Create Plan </button>
+       <button  class="plan"onClick={this.onHandleClick_product}>Create Prodect </button></th>
+      </tr>
+      </thead> 
+    {/* <tbody>
   <tr>
     <td>Kavya</td>
     <td>2-1-2020</td>
@@ -84,7 +81,7 @@ class System extends Component {
   <td>2-1-2020</td>
  
   </tr>
- </tbody>
+ </tbody> */}
 </table>
                 </div>
             </div>
