@@ -20,14 +20,15 @@ function App() {
      <switch>
      {/* <Route exact path ='/' component={SignupPage}></Route> */}
      <Route exact path='/student' component={StudentComponent}></Route>
-<Route exact path='/student/created' component={StudentComponent}></Route>
-<Route exact path='/student/edit/:id' component={Edit}></Route>
-     {/* <Route exact path='/Login' component={LoginForm}></Route>
-  <Route exact path='/Navbar' component={Navbar}></Route> */}
+     
+{/* <Route exact path='/student/created' component={StudentComponent}></Route>
+<Route exact path='/student/edit/:id' component={Edit}></Route> */}
+      {/* <Route exact path='/Login' component={LoginForm}></Route> */}
+  {/* <Route exact path='/Navbar' component={Navbar}></Route>  */}
        {/* <Route exact path ='/' component ={System}></Route>   */}
-        {/* <Route exact patch ='/Product' component ={Productpage}></Route>
-      <Route exact patch ='/plan' component ={Planpage}></Route> */}
-     {/* <Route exact patch ='/account_inf' component ={Account_inf}></Route>   */}
+        {/* {/* <Route exact patch ='/Product' component ={Productpage}></Route> */}
+      {/* <Route exact patch ='/plan' component ={Planpage}></Route>  */}
+     {/* <Route exact patch ='/' component ={Account_inf}></Route>   */}
      {/* <Route exact patch ='/Gallery' component ={Gallery}></Route> */}
        </switch> 
       </Router>
