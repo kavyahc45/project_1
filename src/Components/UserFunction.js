@@ -3,8 +3,8 @@ import axios from 'axios'
 
 export const studentProfile = profileuser => {
   return axios
-    .post('users/studentProfile', {
-      studentname: profileuser.studentname,
+    .post('users/userProfile', {
+      Username: profileuser.studentname,
       address: profileuser.address,
       email: profileuser.email,
       mobileNumber: profileuser.mobileNumber,

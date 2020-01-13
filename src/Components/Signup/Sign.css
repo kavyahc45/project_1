@@ -1,42 +1,32 @@
-#register  {
-  width: 300px;
-  border: 1px solid #d6d7da;
-  padding: 0px 15px 15px 15px;
-  border-radius: 5px;
-  font-family: arial;
-  line-height: 16px;
-  color: #333333;
-  font-size: 14px;
-  background-color: peachpuff;
-  margin: 100px auto;
+/* .row{
+  background-color: rgb(115, 182, 115);
+  margin-left: 200px;
+  margin-right: 300px;
+ 
 }
-
-form label, form input {
-  display: block;
-  margin-bottom: 10px;
-  width: 90%
+.button{
+  margin: 50px;
+  margin-left: 200px;
+color: green;
 }
-
-form input {
-  padding: 10px;
-  border: solid 1px #BDC7D8;
+.frstname{
+ 
+  margin-left: 200px;
 
 }
+.email{
+  margin-left: 240px;
 
-.button {
-  background-color: rgb(48, 137, 167);
-  border-color: #3ac162;
-  font-weight: bold;
-  padding: 12px 15px;
-  color: #ffffff;
 }
+.password{
+  margin-left: 200px;
 
-.errorMsg {
-  color: #cc0000;
-  margin-bottom: 12px;
 }
-
-.sucessMsg {
-  color: #6B8E23;
-  margin-bottom: 10px;
+.errorMsg{
+  color: red;
 }
+.name{
+margin-left: 200px;
+margin-top: 50px;
+margin-bottom: 50px;
+} */

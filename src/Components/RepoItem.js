@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class RepoItem extends React.Component {
+class RepoItem extends Component {
   constructor(props) {
     super(props);
   }
@@ -9,7 +9,7 @@ class RepoItem extends React.Component {
     debugger;
     console.log(id)
     alert(id);
-    fetch('/users/studentProfile',
+    fetch('/users/UserProfile',
       {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },

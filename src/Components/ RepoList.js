@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import RepoItem from './RepoItem'
 
-class RepoList extends React.Component {
+class RepoList extends Component {
 
   render() {
     var rows = [];

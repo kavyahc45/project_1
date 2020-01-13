@@ -38,7 +38,7 @@ class Edit extends Component {
       studentname: '',
       address: '',
       email: '',
-      course: '',
+     
       mobileNumber: ''
     })
     this.props.history.push('/student');
@@ -52,7 +52,7 @@ class Edit extends Component {
       .then(res => {
         this.setState({
           studentname: res.data.studentname,
-          course: res.data.course,
+          
           address: res.data.address,
           email: res.data.email,
           mobileNumber: res.data.mobileNumber,

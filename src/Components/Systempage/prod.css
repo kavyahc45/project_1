@@ -1,7 +1,11 @@
 .prod{
     background-color: rgb(127, 187, 127);
+   
 }
 .plan{
     
     background-color: lightseagreen;
+}
+.butn{
+margin-right: 400px;
 }

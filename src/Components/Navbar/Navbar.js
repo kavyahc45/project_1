@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import './Navbar.css'
-import BrowerHistory from '../../Utils/BrowerHestory';
+import BrowserHistory from '../../Utils/BrowserHistory';
 
 class Navbar extends Component {
   onHandleClick(){
         
-      BrowerHistory.push('/System');
+    BrowserHistory.push('/system');
         }
 
-        onClickhandel_gallery(){
+        // onClickhandel_gallery(){
         
-          BrowerHistory.push('/Gallery');
-            } 
+        //   BrowerHistory.push('/Gallery');
+        //     } 
     render() {
       
         return (

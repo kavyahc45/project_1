@@ -1,8 +1,7 @@
 import axios from 'axios'
 export function registerHandle(payload){
-debugger
 const options = {
-url: 'http://localhost:4013/Signup',
+url: 'http://localhost:4090/Signup',
 method: 'POST',
 
 data: payload

@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
 import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
+import Calendar from 'react-calendar';
+
+
 class Planpage extends Component {
+
+    // state = {
+    //     date: new Date(),
+    //   }
+     
+    //   onChange = date => this.setState({ date })
+     
+
     render() {
         return (
             <div className="prod">
+                  
                  <h2>PLAN INFORMATION </h2>
                  <br></br><br></br>
                  <Button color="primary" id="toggler1" style={{ marginBottom: '1rem' }}>
@@ -127,7 +139,14 @@ class Planpage extends Component {
 <div class="row">
 <div class="col">
       <label>Commission Start Date</label>
+      
+      {/* <Calendar
+          onChange={this.onChange}
+          value={this.state.date}
+        /> */}
+        
         <input type="text" placeholder="mm/dd/yyyy"/> 
+       
       </div>
       <div class="col">
  </div>
