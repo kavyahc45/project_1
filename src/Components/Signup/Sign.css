@@ -1,32 +1,32 @@
-/* .row{
+.background{
   background-color: rgb(115, 182, 115);
   margin-left: 200px;
   margin-right: 300px;
  
 }
-.button{
+.button1{
   margin: 50px;
   margin-left: 200px;
 color: green;
 }
-.frstname{
+.frstname1{
  
   margin-left: 200px;
 
 }
-.email{
+.email1{
   margin-left: 240px;
 
 }
-.password{
+.password1{
   margin-left: 200px;
 
 }
-.errorMsg{
+.errorMsg1{
   color: red;
 }
-.name{
+.name1{
 margin-left: 200px;
 margin-top: 50px;
 margin-bottom: 50px;
-} */
+}

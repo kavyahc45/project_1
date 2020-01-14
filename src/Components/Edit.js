@@ -3,21 +3,20 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class Edit extends Component {
+    
   constructor(props) {
     super(props);
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.onChangeStudentName = this.onChangeStudentName.bind(this);
-    this.onChangeCourse = this.onChangeCourse.bind(this);
+    this.onChangeName = this.onChangeStudentName.bind(this);
+    this.onChangeemail = this.onChangeCourse.bind(this);
     this.onChangeAddress = this.onChangeAddress.bind(this);
-    this.onChangeEmail = this.onChangeEmail.bind(this);
-    this.onChangeMobile = this.onChangeMobile.bind(this);
+    this.onChangeMobileNum = this.onChangeMobile.bind(this);
     this.state = {
-      studentname: '',
-      course: '',
-      address: '',
+      Name: '',
       email: '',
-      mobileNumber: '',
+      Address: '',
+      MobileNum: '',
       submitted: false
     };
   }
@@ -26,36 +25,33 @@ class Edit extends Component {
     event.preventDefault();
     this.setState({ submitted: true });
     const profileuser = {
-      studentname: this.state.studentname,
-      address: this.state.address,
+      Name: this.state.Nname,
+      Address: this.state.Address,
       email: this.state.email,
-      course: this.state.course,
-      mobileNumber: this.state.mobileNumber
+      MobileNum: this.state. MobileNum
     }
-    axios.put('http://localhost:4013/users/studentProfile/update/' + this.props.match.params.id, profileuser)
+    axios.put('http://localhost:4002/users/studentProfile/update/' + this.props.match.params.id, profileuser)
       .then(res => console.log(res.data, "hi"));
     this.setState({
-      studentname: '',
-      address: '',
+      Name: '',
+      Address: '',
       email: '',
-     
-      mobileNumber: ''
+      MobileNum: ''
     })
-    this.props.history.push('/student');
+    this.props.history.push('/UserComponent');
   }
 
   componentDidMount() {
     console.log(this.props.match.params.id)
     debugger;
-    axios.get('http://localhost:4013/users/edit/' + this.props.match.params.id)
+    axios.get('http://localhost:4002/users/edit/' + this.props.match.params.id)
 
       .then(res => {
         this.setState({
-          studentname: res.data.studentname,
-          
-          address: res.data.address,
+          Name: res.data.Name,
+         Address: res.data.Address,
           email: res.data.email,
-          mobileNumber: res.data.mobileNumber,
+          MobileNum: res.data.MobileNum,
         });
       })
       .catch(function (error) {
@@ -65,17 +61,13 @@ class Edit extends Component {
 
   onChangeStudentName(e) {
     this.setState({
-      studentname: e.target.value
+      Name: e.target.value
     });
   }
-  onChangeCourse(e) {
-    this.setState({
-      course: e.target.value
-    });
-  }
+ 
   onChangeAddress(e) {
     this.setState({
-      address: e.target.value
+      Address: e.target.value
     });
   }
   onChangeEmail(e) {
@@ -85,7 +77,7 @@ class Edit extends Component {
   }
   onChangeMobile(e) {
     this.setState({
-      mobileNumber: e.target.value
+      MobileNum: e.target.value
     });
   }
 
@@ -107,27 +99,19 @@ class Edit extends Component {
                   <input type="text" className="form-control" value={this.state.studentname}
                     onChange={this.onChangeStudentName} />
                 </div>
-                <div className={'form-group'}>
-                  <label For="course">Course</label>
-                  <select id="myList" className="form-control"
-                    onChange={this.onChangeCourse} >
-                    <option>five</option>
-                    <option>seven</option>
-                    
-                  </select>
-                </div>
+               
                 <div className={'form-group'}>
                   <label For="address">Address</label>
                   <input type="text" className="form-control" value={this.state.address}
                     onChange={this.onChangeAddress} />
                 </div>
                 <div className={'form-group'}>
-                  <label For="email">Email</label>
+                  <label For="email">email</label>
                   <input type="email" className="form-control" value={this.state.email}
                     onChange={this.onChangeEmail} />
                 </div>
                 <div className={'form-group'}>
-                  <label For="mobileNumber">Mobile Number</label>
+                  <label For="mobileNumber">MobileNum</label>
                   <input type="number" className="form-control"
                     value={this.state.mobileNumber}
                     onChange={this.onChangeMobile} />

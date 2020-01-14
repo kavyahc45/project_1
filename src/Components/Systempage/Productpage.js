@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 // import Calendar from 'react-input-calendar';
+import BrowserHistory from '../../Utils/BrowserHistory';
 import './prod.css';
 
 class Productpage extends Component {
+
+    onHandleClick_product() {
+        BrowserHistory.push('/UserComponent');
+      }
+      
+
+
     render() {
         return (
             <div className="prod">
@@ -183,7 +191,7 @@ class Productpage extends Component {
                 </div>
 
                 <br></br><br></br>
-                <button class="plan">Save</button>
+                <button class="plan"  onClick={this.onHandleClick_product} >Save</button>
             </div>
         );
     }

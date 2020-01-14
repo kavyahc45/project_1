@@ -5,7 +5,7 @@ import BrowserHistory from '../../Utils/BrowserHistory';
 class Navbar extends Component {
   onHandleClick(){
         
-    BrowserHistory.push('/system');
+    BrowserHistory.push('/Table');
         }
 
         // onClickhandel_gallery(){

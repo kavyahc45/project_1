@@ -1,73 +1,22 @@
 import React, { Component } from 'react';
 import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 import './account_inf.css';
+import BrowserHistory from '../../Utils/BrowserHistory';
+
 
 
 class Account_inf extends Component {
-    // constructor(props) {
-    //   super(props);
-
-    //   this.state = {
-    //     AccountName: '',
-    //     Date
-    //   };
-    //   this.handleChange = this.handleChange.bind(this);
-    //   this.handleSubmit = this.handleSubmit.bind(this);
-    // }
-    // handleSearch = (user) => {
-    //   console.log(user);
-    //   let url = 'http://localhost:4013/users/studentProfile?studentname=' + user
-    //   fetch(url)
-    //   .then(response => response.json()).then((repos) => {
-    //       this.setState({
-    //         repos: repos
-    //       });
-    //     });
-    // };
-    // handleChange(e) {
-    //   this.setState({ [e.target.name]: e.target.value });
-    // }
-    // handleSubmit(event) {
-    //   event.preventDefault();
-    //   const { AccountName, Date } = this.state;
-    //   this.setState({ submitted: true });
-    //   const profileuser = {
-    //     AccountName: this.state. AccountName,
-    //     Date: this.state. Date,
-
-    //   }
-    //   AccountProfile(profileuser).then(res => {
-    //     if ( AccountName && Date) {
-    //       window.alert(`registered successfully`)
-    //       window.location = '/account';  
-    //     }
-    //   })
-    // }
-
+   
+    onHandleClick_Inf() {
+        BrowserHistory.push('/UserComponent');
+    }
 
     render() {
 
-        // const { AccountName,Date } = this.state;
+       
         return (
             <div class="plaepage">
-                {/* <div className="col-md-3 offset-md-1 ">
-<form className="form" onSubmit={this.handleSubmit}>
-                <div className={'form-group' + (submitted && !accountname? ' has-error' : '')}>
-                  <label htmlFor="accountname">Account Name</label>
-                  <input type="text" className="form-control" name="accountname"
-                   value={this.state.accountname}
-                    onChange={this.handleChange} />
-                  {submitted && ! accountname &&
-                    <div className="help-block"> Name is required</div>
-                  }
-                </div>
-                </form>
-                </div>
-
-
-
-            <div class="mgg">
-            <div className="prod"> */}
+              
 
                 <h1>ACCOUNT INFORMATION</h1>
                 <br></br>
@@ -200,7 +149,7 @@ class Account_inf extends Component {
                     </Card>
                 </UncontrolledCollapse>
                 <br></br><br></br>
-                <button class="plan">Save</button>
+                <button class="plan" onClick={this.onHandleClick_Inf} >Save</button>
             </div>
 
 

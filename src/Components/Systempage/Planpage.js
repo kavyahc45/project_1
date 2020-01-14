@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 import Calendar from 'react-calendar';
-
+import BrowserHistory from '../../Utils/BrowserHistory';
 
 class Planpage extends Component {
+
+  onHandleClick_plan() {
+    BrowserHistory.push('/UserComponent');
+}
 
     // state = {
     //     date: new Date(),
@@ -191,7 +195,7 @@ class Planpage extends Component {
 </UncontrolledCollapse>
    </div>
    <br></br><br></br>
-                <button class="plan">Save</button> 
+                <button class="plan" onClick={this.onHandleClick_plan}>Save</button> 
 
             </div>
         );
