@@ -9,14 +9,14 @@ class Edit extends Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.onChangeName = this.onChangeStudentName.bind(this);
-    this.onChangeemail = this.onChangeCourse.bind(this);
-    this.onChangeAddress = this.onChangeAddress.bind(this);
-    this.onChangeMobileNum = this.onChangeMobile.bind(this);
+    // this.onChangeemail = this.onChangeCourse.bind(this);
+    // this.onChangeAddress = this.onChangeAddress.bind(this);
+    // this.onChangeMobileNum = this.onChangeMobile.bind(this);
     this.state = {
       Name: '',
-      email: '',
-      Address: '',
-      MobileNum: '',
+      // email: '',
+      // Address: '',
+      // MobileNum: '',
       submitted: false
     };
   }
@@ -26,17 +26,17 @@ class Edit extends Component {
     this.setState({ submitted: true });
     const profileuser = {
       Name: this.state.Nname,
-      Address: this.state.Address,
-      email: this.state.email,
-      MobileNum: this.state. MobileNum
+      // Address: this.state.Address,
+      // email: this.state.email,
+      // MobileNum: this.state. MobileNum
     }
-    axios.put('http://localhost:4002/users/studentProfile/update/' + this.props.match.params.id, profileuser)
+    axios.put('http://localhost:4002/users/accountProfile/update/' + this.props.match.params.id, profileuser)
       .then(res => console.log(res.data, "hi"));
     this.setState({
       Name: '',
-      Address: '',
-      email: '',
-      MobileNum: ''
+      // Address: '',
+      // email: '',
+      // MobileNum: ''
     })
     this.props.history.push('/UserComponent');
   }
@@ -49,9 +49,9 @@ class Edit extends Component {
       .then(res => {
         this.setState({
           Name: res.data.Name,
-         Address: res.data.Address,
-          email: res.data.email,
-          MobileNum: res.data.MobileNum,
+        //  Address: res.data.Address,
+        //   email: res.data.email,
+        //   MobileNum: res.data.MobileNum,
         });
       })
       .catch(function (error) {
@@ -65,21 +65,21 @@ class Edit extends Component {
     });
   }
  
-  onChangeAddress(e) {
-    this.setState({
-      Address: e.target.value
-    });
-  }
-  onChangeEmail(e) {
-    this.setState({
-      email: e.target.value
-    });
-  }
-  onChangeMobile(e) {
-    this.setState({
-      MobileNum: e.target.value
-    });
-  }
+  // onChangeAddress(e) {
+  //   this.setState({
+  //     Address: e.target.value
+  //   });
+  // }
+  // onChangeEmail(e) {
+  //   this.setState({
+  //     email: e.target.value
+  //   });
+  // }
+  // onChangeMobile(e) {
+  //   this.setState({
+  //     MobileNum: e.target.value
+  //   });
+  // }
 
   render() {
     return (
@@ -100,7 +100,7 @@ class Edit extends Component {
                     onChange={this.onChangeStudentName} />
                 </div>
                
-                <div className={'form-group'}>
+                {/* <div className={'form-group'}>
                   <label For="address">Address</label>
                   <input type="text" className="form-control" value={this.state.address}
                     onChange={this.onChangeAddress} />
@@ -115,7 +115,7 @@ class Edit extends Component {
                   <input type="number" className="form-control"
                     value={this.state.mobileNumber}
                     onChange={this.onChangeMobile} />
-                </div>
+                </div> */}
                 <div className={'form-group'}>
                   <input type="submit" className="btn btn-primary" value="Update" />
                   <button type="submit" className="btn btn-danger text-center">Cancel</button>

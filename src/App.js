@@ -14,6 +14,9 @@ import Gallery from './Components/Gallery/Gallery';
 
 import UserComponent from './Components/UserComponent';
 import Table from './Components/Table';
+import Generalinsurance from './Components/Generalinsurance/Generalinsurance';
+import VehicleIns from './Components/Generalinsurance/VehicleIns';
+import CropInu from './Components/Generalinsurance/CropInu';
 
 
 function App() {
@@ -22,13 +25,17 @@ function App() {
             <Router>
                 <switch>
                     <Route exact path='/' component={SignupPage}></Route>
-                 <Route exact path ='/UserComponent' component={UserComponent}></Route>
+                 {/* <Route exact path ='/UserComponent' component={UserComponent}></Route> */}
                      <Route exact path='/Login' component={LoginForm}></Route>
-                    <Route exact path='/Navbar' component={Navbar}></Route>
-                   <Route exact path ='/Product' component ={Productpage}></Route>
+                     <Route exact path ='/gen_inf' component ={Generalinsurance}></Route>
+                     <Route exact path ='/vehicle' component ={VehicleIns}></Route>
+                     <Route exact path ='/crop' component ={CropInu}></Route>
+                     
+                    {/* <Route exact path='/Navbar' component={Navbar}></Route> */}
+                   {/* <Route exact path ='/Product' component ={Productpage}></Route>
                     <Route exact path ='/plan' component ={Planpage}></Route> 
-                    <Route exact path ='/Account_inf' component ={Account_inf}></Route>  
-                    <Route exact path ='/Table' component ={Table}></Route>
+                    <Route exact path ='/Account_inf' component ={Account_inf}></Route>   */}
+                    {/* <Route exact path ='/Table' component ={Table}></Route> */}
                   
                     {/* <Route exact path ='/Gallery' component ={Gallery}></Route> */}
                 </switch>

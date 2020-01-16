@@ -11,12 +11,16 @@ class Table extends Component {
         super(props);
         this.state = {
           Name: '',
-          email: '',
-          Address: '',
-         MobileNum:'',
+        //   email: '',
+        //   Address: '',
+        //  MobileNum:'',
        
         }
-      }
+       
+      };
+
+
+
       handleChangeg=(e)=>{
           this.setState({[e.target.name]:e.target.value});
       }
@@ -25,21 +29,22 @@ class Table extends Component {
             Name: e.target.value
         });
       }
-      onChangeemail=(e)=> {
-          this.setState({
-            email: e.target.value
-        })  
-      }
-      onChangeAddress=(e)=> {
-        this.setState({
-            Address: e.target.value
-      })  
-    }
-    onChangeMobileNum=(e)=> {
-        this.setState({
-            MobileNum: e.target.value
-      })  
-    }
+
+    //   onChangeemail=(e)=> {
+    //       this.setState({
+    //         email: e.target.value
+    //     })  
+    //   }
+    //   onChangeAddress=(e)=> {
+    //     this.setState({
+    //         Address: e.target.value
+    //   })  
+    // }
+    // onChangeMobileNum=(e)=> {
+    //     this.setState({
+    //         MobileNum: e.target.value
+    //   })  
+    // }
 
    
   
@@ -49,9 +54,9 @@ class Table extends Component {
           e.preventDefault();
           const payload = {
             Name: this.state.Name,
-            email : this.state. email,
-            Address: this.state.Address,
-            MobileNum: this.state. MobileNum,
+            // email : this.state. email,
+            // Address: this.state.Address,
+            // MobileNum: this.state. MobileNum,
            
          
         };
@@ -81,9 +86,9 @@ class Table extends Component {
                         className="width" 
                         value={this.state.Name}
                         onChange={this.onChangeName}
-                    />
+                    /> 
                   </div>
-                  <div>
+                  {/* <div>
                     <label> email :</label>
                       <input type="text" 
                         className="width"
@@ -106,7 +111,7 @@ class Table extends Component {
                         value={this.state.MobileNum}
                         onChange={this.onChangeMobileNum}
                       />
-                  </div>
+                  </div> */}
 
                  
                  

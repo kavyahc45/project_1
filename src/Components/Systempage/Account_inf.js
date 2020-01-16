@@ -149,7 +149,7 @@ class Account_inf extends Component {
                     </Card>
                 </UncontrolledCollapse>
                 <br></br><br></br>
-                <button class="plan" onClick={this.onHandleClick_Inf} >Save</button>
+                <button class="plan" onClick={this.onHandleClick} >Save</button>
             </div>
 
 

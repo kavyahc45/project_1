@@ -1,32 +1,19 @@
 .background{
   background-color: rgb(115, 182, 115);
   margin-left: 200px;
+  padding: 20px 0;
   margin-right: 300px;
- 
 }
-.button1{
-  margin: 50px;
-  margin-left: 200px;
-color: green;
+.buttoncancel {
+  margin-left: 20px;
 }
-.frstname1{
- 
-  margin-left: 200px;
-
+.signupbody {
+  background-color: blueviolet;
+  padding: 150px 0;
 }
-.email1{
-  margin-left: 240px;
-
+.heading {
+  margin: 30px;
 }
-.password1{
-  margin-left: 200px;
-
-}
-.errorMsg1{
+.red{
   color: red;
-}
-.name1{
-margin-left: 200px;
-margin-top: 50px;
-margin-bottom: 50px;
 }

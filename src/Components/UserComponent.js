@@ -3,6 +3,7 @@ import axios from 'axios';
 import './UserComp.css';
 import BrowserHistory from '../Utils/BrowserHistory';
 import TableRow from './TableRow';
+// import FilterResults from 'react-filter-search';
 
 class UserComponent extends Component {
 
@@ -29,19 +30,19 @@ class UserComponent extends Component {
       }
 
       onHandleClick_User() {
-        BrowserHistory.push('/Table');
+        BrowserHistory.push('./Table');
     }
 
     onHandleClick_Inf() {
-      BrowserHistory.push('/Account_inf');
+      BrowserHistory.push('./Account_inf');
   }
 
   onHandleClick_product() {
-      BrowserHistory.push('/plan');
+      BrowserHistory.push('./plan');
   }
 
   onHandleClick_product() {
-    BrowserHistory.push('/Product');
+    BrowserHistory.push('./Product');
 }
 
 
@@ -51,6 +52,9 @@ class UserComponent extends Component {
                <h2>Account List</h2>
                <br></br><br></br>
                <div >
+                 {/* <div>
+               <Search handleSubmit={this.handleSearch} />
+               <input type="text"  onChange={this.handleChange } placeholder='Enter Name' /></div> */}
                     <input class="src"  type="text" placeholder="search" handleSubmit={this.handleSearch}></input>
                     <button class="cre"  onClick={this.onHandleClick_User}>Create a new account</button>
                 </div>
@@ -58,11 +62,11 @@ class UserComponent extends Component {
                 <div>
                   <button class="plan">Action
 <br></br>
-<select>
-  <option></option>
-<option class="plan" onClick={this.onHandleClick_Inf}>ACCOUNT INFORMATION</option>
-  <option class="plan" onClick={this.onHandleClick_plan}>Craete Plan</option>
-  <option class="plan" onClick={this.onHandleClick_product}>Create Prodect</option>
+<select onClick={this.onHandleClick_Inf}>
+  {/* <option></option> */}
+<option class="plan" >ACCOUNT INFORMATION</option>
+  <option class="plan" >CREATE PLAN</option>
+  <option class="plan" >CREATE PRODUCT</option>
 </select>
                   </button>
 
@@ -74,16 +78,18 @@ class UserComponent extends Component {
                 </div>
             </div> */}
 
-           
+
+
           <table className="table" style={{ marginTop: 20 }}>
+        
         
             <thead>
               <tr>
-                <th className="name1">Name</th>
-                <th className="name2">email</th>
+                <th  className="name1">Name</th>
+                {/* <th className="name2">email</th>
                 <th  className="name3">Address</th>
                 <th className="name4">MobileNum</th>
-              <th colSpan="2" className="name5">Edit</th>
+              <th colSpan="2" className="name5">Edit</th> */}
               </tr>
             </thead>
             <tbody>
@@ -94,5 +100,49 @@ class UserComponent extends Component {
         );
     }
 }
+
+
+
+ 
+// class Search extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+     
+//     };
+//   }
+//   componentWillMount() {
+//     fetch('https://jsonplaceholder.typicode.com/users')
+//       .then(response => response.json())
+//       .then(json => this.setState({ data: json }));
+//   }
+//   handleChange = event => {
+    
+//     this.setState({  });
+//   };
+//   render() {
+   
+//     return (
+//       <div>
+//         {/* <input type="text" value={value} onChange={this.handleChange} /> */}
+//         <SearchResults
+        
+//           renderResults={results => (
+//             <div>
+//               {results.map(el => (
+//                 <div>
+//                   {/* <span>{el.name}</span>
+//                   <span>{el.email}</span> */}
+
+                  
+//                 </div>
+//               ))}
+//             </div>
+//           )}
+//         />
+//       </div>
+//     );
+//   }
+// }
 
 export default UserComponent;

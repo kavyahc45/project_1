@@ -1,8 +1,9 @@
 import axios from 'axios';
+import BrowserHistory from '../Utils/BrowserHistory';
 
 export function loginHandle(payload){
 const options = {
-    url: 'http://localhost:4013/Signup',
+    url: 'http://localhost:4002/Signin',
     method: 'POST',
     // headers: {
     //   'Accept': 'application/json',
@@ -12,10 +13,11 @@ const options = {
   };
   
     return function(dispatch)
-     {console.log(payload)
+     {console.log(payload,"login")
         axios(options)
         .then(response => {
           console.log(response.status);
+          BrowserHistory.push('/gen_inf')
         });
        dispatch({type:'LOGIN',payload:payload});
      }

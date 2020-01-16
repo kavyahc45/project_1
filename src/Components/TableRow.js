@@ -22,7 +22,7 @@ class TableRow extends Component {
           <td>
             {this.props.obj.Name}
           </td>
-          <td>
+          {/* <td>
             {this.props.obj.email}
           </td>
           <td>
@@ -30,15 +30,15 @@ class TableRow extends Component {
           </td>
           <td>
             {this.props.obj.MobileNum}
-          </td>
+          </td> */}
           
-          <td>
+          {/* <td>
             <button className="btn btn-primary">Account  Edit</button>
            
           </td>
           <td>
             <button onClick={this.delete} className="btn btn-danger">Delete</button>
-          </td>
+          </td> */}
 
           
         </tr>
