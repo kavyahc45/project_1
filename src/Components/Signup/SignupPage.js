@@ -37,17 +37,17 @@ class SignupPage extends Component {
             temp=temp+1;
         }
         else
-            this.setState({ferr:"username invalid"})
+            this.setState({ferr:"username required"})
         if (this.state.email.length != 0 && this.state.email.match(/^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]$/) && this.state.email != null){
             temp=temp+1;
         }
         else
-            this.setState({uerr:"Email invalid"})
+            this.setState({uerr:"Email required"})
         if (this.state.password.length != 0 && this.state.password.match(/^[@#][A-Za-z0-9]{9,11}$/) && this.state.password != null){
             temp=temp+1;
         }
         else
-            this.setState({perr:"password invalid"})
+            this.setState({perr:"password required"})
         if(temp==3){
             this.props.registerHandle(payload);
         }

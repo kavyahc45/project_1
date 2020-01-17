@@ -17,6 +17,7 @@ import Table from './Components/Table';
 import Generalinsurance from './Components/Generalinsurance/Generalinsurance';
 import VehicleIns from './Components/Generalinsurance/VehicleIns';
 import CropInu from './Components/Generalinsurance/CropInu';
+import Checkoutform from './Components/Checkoutform'
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                      <Route exact path ='/gen_inf' component ={Generalinsurance}></Route>
                      <Route exact path ='/vehicle' component ={VehicleIns}></Route>
                      <Route exact path ='/crop' component ={CropInu}></Route>
+                     <Route exact path ='/checkoutform' component={Checkoutform}></Route>
                      
                     {/* <Route exact path='/Navbar' component={Navbar}></Route> */}
                    {/* <Route exact path ='/Product' component ={Productpage}></Route>

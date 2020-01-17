@@ -1,5 +1,5 @@
 .background{
-  background-color: rgb(115, 182, 115);
+  background: url('./gettyimages.jpg') no-repeat;
   margin-left: 200px;
   padding: 20px 0;
   margin-right: 300px;
@@ -8,8 +8,10 @@
   margin-left: 20px;
 }
 .signupbody {
-  background-color: blueviolet;
-  padding: 150px 0;
+  /* background: url('./gettyimages.jpg') no-repeat; */
+  background-color: rgb(150, 129, 170);
+  padding: 200px 0;
+  color:green;
 }
 .heading {
   margin: 30px;

@@ -23,12 +23,12 @@ class LoginForm extends Component {
         let reg_email = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]$/;
         let reg_pwd = /^[@#][A-Za-z0-9]{9,}$/;
         
-        if (!this.state.password) this.setState({ passwordError: ' Password is required' });
+        if (!this.state.password) this.setState({ passwordError: ' Invalid Password' });
         else if (!reg_pwd.test(this.state.password)) this.setState({ passwordError: 'Invalid Password' });
         else temp=temp+1
         
-        if (!this.state.email) this.setState({ emailError: ' email is required' });
-        else if (!reg_email.test(this.state.email)) this.setState({ emailError: ' Invalid Email' });
+        if (!this.state.email) this.setState({ emailError: ' Invalid email' });
+        else if (!reg_email.test(this.state.email)) this.setState({ emailError: ' Invalid email' });
         else temp=temp+1
         if(temp==2){
             this.props.loginHandle(payload);
