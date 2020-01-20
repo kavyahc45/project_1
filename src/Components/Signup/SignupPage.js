@@ -59,7 +59,7 @@ class SignupPage extends Component {
                     <div class="row background">
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <h3 className='heading'>Signup</h3>
+                            <h3 className='heading1'>Signup</h3>
                             <label ><b>User Name :</b></label>
                             <input type="text" name="firstname" placeholder="User name"  onChange={this.onHandleChange} />
                             <p className="red" >{this.state.ferr}</p>
@@ -72,7 +72,7 @@ class SignupPage extends Component {
                             <button onClick={this.onHandleClick} >Register</button>
                             <button onClick={this.onHandleClicksCancel} className="buttoncancel">Cancel</button>
                             <div>you have already registered?
-                            <a href="Login">LOGIN </a></div>
+                            <a href="Login" >LOGIN </a></div>
                         </div>
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                     </div>

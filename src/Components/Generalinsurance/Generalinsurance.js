@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import BrowserHistory from '../../Utils/BrowserHistory';
+import '../../css/Gen_in.css';
+import Navbar from '../Navbar/Navbar';
 
 class Generalinsurance extends Component {
     state={
@@ -16,15 +18,25 @@ class Generalinsurance extends Component {
             break;
         }
     }
+
+    onHandleClick(){
+        
+        BrowserHistory.push('/');
+            }
+    
+
     render() {
         return (
-            <div>
-                <h2>General Insurance</h2>
-                 <select onChange={this.handlechange} name="insurance">
+            <div className="background1">
+                <Navbar/>
+                <div>
+                <h2 className="Ins">General Insurance</h2>
+                 <select onChange={this.handlechange} name="insurance" className="crop">
                      <option>Crop Insurance</option>
                      <option>Vehicle Insurance</option>
                  </select>
-                 <div><button onClick={this.handleclick}>Submit</button></div>
+                 <div className="sub"><button onClick={this.handleclick} className="sub">Submit</button></div>
+                 </div>
             </div>
         );
     }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { CardElement, injectStripe } from 'react-stripe-elements';
+import  BrowserHistory from '../Utils/BrowserHistory';
 import '../css/payment.css'
 
 class CheckoutForm extends Component {
@@ -23,8 +24,13 @@ class CheckoutForm extends Component {
       if (response.ok) this.setState({complete: true});
   }
 
+  onHandleClick() {
+    BrowserHistory.push('/gen_inf');
+}
+
   render() {
     if (this.state.complete) return <h1>Payment Complete</h1>;
+    
     return (
         <div class="container">
           <div class="row">
@@ -38,7 +44,8 @@ class CheckoutForm extends Component {
             </div>
             <div class="col-sm-3 col-lg-3 col-md-3 col-xs-3"></div>
           </div>
-        </div>
+          <button class="pay" onClick={this.onHandleClick}>Home</button>
+          </div>
     );
   }
 }

@@ -1,24 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router,Redirect, Route } from 'react-router-dom';
 import LoginForm from './Components/LoginForm/LoginForm';
 import SignupPage from './Components/Signup/SignupPage';
-import Navbar from './Components/Navbar/Navbar';
-import account_inf from './Components/Systempage/Account_inf';
-import Productpage from './Components/Systempage/Productpage';
-import Planpage from './Components/Systempage/Planpage';
-import Account_inf from './Components/Systempage/Account_inf';
-import Gallery from './Components/Gallery/Gallery';
-
-
-import UserComponent from './Components/UserComponent';
-import Table from './Components/Table';
 import Generalinsurance from './Components/Generalinsurance/Generalinsurance';
 import VehicleIns from './Components/Generalinsurance/VehicleIns';
 import CropInu from './Components/Generalinsurance/CropInu';
 import Checkoutform from './Components/Checkoutform'
+import Admin from './Components/Admin';
 
+const PrivateRoute = ({ component: IncomingComponent, ...rest }) => (
+    <Route
+    {...rest}
+    render={props => (  
+      (sessionStorage.getItem('authentication')) ? (<IncomingComponent {...props} />) : (
+        <Redirect to={{pathname: '/', state: { from: props.location }, }}/>)
+    )}
+  />
+  );
 
 function App() {
     return (
@@ -26,20 +26,12 @@ function App() {
             <Router>
                 <switch>
                     <Route exact path='/' component={SignupPage}></Route>
-                 {/* <Route exact path ='/UserComponent' component={UserComponent}></Route> */}
                      <Route exact path='/Login' component={LoginForm}></Route>
-                     <Route exact path ='/gen_inf' component ={Generalinsurance}></Route>
-                     <Route exact path ='/vehicle' component ={VehicleIns}></Route>
-                     <Route exact path ='/crop' component ={CropInu}></Route>
-                     <Route exact path ='/checkoutform' component={Checkoutform}></Route>
-                     
-                    {/* <Route exact path='/Navbar' component={Navbar}></Route> */}
-                   {/* <Route exact path ='/Product' component ={Productpage}></Route>
-                    <Route exact path ='/plan' component ={Planpage}></Route> 
-                    <Route exact path ='/Account_inf' component ={Account_inf}></Route>   */}
-                    {/* <Route exact path ='/Table' component ={Table}></Route> */}
-                  
-                    {/* <Route exact path ='/Gallery' component ={Gallery}></Route> */}
+                     <PrivateRoute exact path ='/gen_inf' component ={Generalinsurance}></PrivateRoute>
+                     <PrivateRoute exact path ='/vehicle' component ={VehicleIns}></PrivateRoute>
+                     <PrivateRoute exact path ='/crop' component ={CropInu}></PrivateRoute>
+                     <PrivateRoute exact path ='/checkoutform' component={Checkoutform}></PrivateRoute>
+                 {/* <PrivateRoute exact path ='/admin' component={Admin}></PrivateRoute> */}
                 </switch>
             </Router>
 

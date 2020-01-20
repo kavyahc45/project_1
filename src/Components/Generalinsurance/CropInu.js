@@ -3,6 +3,7 @@ import { cropHandle } from '../../Actions//cropAction'
 import { connect } from 'react-redux';
 import axios from 'axios';
 import BrowserHistory from '../../Utils/BrowserHistory'
+import Navbar from '../Navbar/Navbar';
 
 class CropInu extends Component {
     constructor(props) {
@@ -45,40 +46,45 @@ class CropInu extends Component {
 
         return (
             <div>
+                <Navbar/>
                 <div id="main-registration-container">
                     <div class="row">
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <h3 className='heading' >Crop</h3>
+                            <h2 className='heading' >Crop</h2>
                             <div>
-                                <label >Name :</label>
+                                <label className="name1"><b>Name :</b></label>
                                 <input type="text" name="name" onChange={this.handlechange}  placeholder="Please enter the name" />
                             </div>
                             <div>
-                                <label  >Crop Name :</label>
+                                <label className="name2" ><b>Crop Name :</b></label>
                                 <select name="cropname" onChange={this.handlechange}>
                                     <option >Paddy </option>
                                     <option >Sugar cane </option>
                                 </select>
                             </div>
                             <div >  
-                                <label >Area :</label>
+                                <label  className="name3"><b>Area :</b></label>
                                 <input type="text" name="area" onChange={this.handlechange}  placeholder="Please enter the area" />
                             </div>
                             <div hidden={this.state.visible}> 
-                                <label >Price :</label>
+                                <label ><b>Price :</b></label>
                                 <b>{price}</b>
                             </div>
                             <div hidden={this.state.visible}>
-                                <label >Premium :</label>
+                                <label ><b>Premium :</b></label>
                                 <b>{premium}</b>
                             </div>
-                            <button onMouseOver={this.onHandleClick} hidden={!this.state.visible}onClick={this.getUpdate}>check premium</button>
+                            <button onMouseOver={this.onHandleClick} hidden={!this.state.visible}onClick={this.getUpdate} className="name4">check premium</button>
                             <button hidden={this.state.visible} onClick={this.payment}>Proceed to pay</button>
                         </div>
+                        
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                        
                     </div>
+                    <div>
+                            <button className="print"><b>Print </b></button>
+                        </div>
                 </div>
             </div>
         );

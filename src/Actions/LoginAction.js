@@ -17,6 +17,7 @@ const options = {
         axios(options)
         .then(response => {
           console.log(response.status);
+          sessionStorage.setItem('authentication', response.data.token)
           BrowserHistory.push('/gen_inf')
         });
        dispatch({type:'LOGIN',payload:payload});

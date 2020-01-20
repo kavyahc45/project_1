@@ -1,21 +1,21 @@
-.background{
-  background: url('./gettyimages.jpg') no-repeat;
-  margin-left: 200px;
-  padding: 20px 0;
-  margin-right: 300px;
-}
-.buttoncancel {
-  margin-left: 20px;
-}
-.signupbody {
-  /* background: url('./gettyimages.jpg') no-repeat; */
-  background-color: rgb(150, 129, 170);
-  padding: 200px 0;
-  color:green;
-}
-.heading {
+.heading1 {
   margin: 30px;
+  color: rgb(27, 143, 216);
 }
 .red{
   color: red;
+  
+}
+.signupbody{
+  background: url('./istock.jpg') no-repeat;
+  border:solid 1px cornsilk;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  width: 1300px;
+  padding: 0;
+  margin-top: 70px;
+  }
+.cul{
+color: rgb(27, 143, 216);
 }

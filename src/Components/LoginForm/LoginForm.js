@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import   BrowserHistory from '../../Utils/BrowserHistory';
 import './LoginForm.css'
 import { connect } from 'react-redux';
@@ -45,14 +44,14 @@ class LoginForm extends Component {
                     <div class="row background">
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <h3 className='heading'>Login</h3>
-                            <label className="font">Email:</label>
+                            <h3 className='heading1'>Login</h3>
+                            <label className=""><b>Email:</b></label>
                             <input type='text' name='email' onChange={this.handleChange} placeholder='email..'/>
                             <p className='red'>{this.state.emailError}</p>
-                            <label className="font">Password:</label>
+                            <label className="font"><b>Password:</b></label>
                             <input type='password' name='password' onChange={this.handleChange} placeholder='Password..'/>
                             <p className='red'>{this.state.passwordError}</p>
-                            <button type="button" class="btn-success" onClick={this.onHandleClick}>Login</button>
+                            <button type="button" class="cul" onClick={this.onHandleClick}><b>Login</b></button>
                         </div>
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                     </div>
