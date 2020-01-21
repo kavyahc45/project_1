@@ -51,6 +51,7 @@ class CropInu extends Component {
                     <div class="row">
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div className="vel">
                             <h2 className='heading' >Crop</h2>
                             <div>
                                 <label className="name1"><b>Name :</b></label>
@@ -77,13 +78,16 @@ class CropInu extends Component {
                             </div>
                             <button onMouseOver={this.onHandleClick} hidden={!this.state.visible}onClick={this.getUpdate} className="name4">check premium</button>
                             <button hidden={this.state.visible} onClick={this.payment}>Proceed to pay</button>
-                        </div>
+                       
                         
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                        
-                    </div>
+                    
                     <div>
                             <button className="print"><b>Print </b></button>
+                        </div>
+                        </div>
+                        </div>
                         </div>
                 </div>
             </div>

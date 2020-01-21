@@ -7,9 +7,9 @@ class Navbar extends Component {
     sessionStorage.removeItem('authentication')
     BrowserHistory.push('/')
   }
-  // onHandleClick=()=>{
-  //   BrowserHistory.push('/admin')
-  // }
+  onHandleClick=()=>{
+    BrowserHistory.push('/gen_inf')
+  }
   render() {
     return (
       <div className="row navbackground">
@@ -17,11 +17,8 @@ class Navbar extends Component {
         <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 ">
           < button  onClick={this.onHandleClick}>Home</ button>
         </div>
+        
         <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8 "></div>
-
-        {/* <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 ">
-          < button  onClick={this.onHandleClick}>Admin</ button>
-        </div> */}
 
         <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 ">
           < button  onClick={this.logout}>Logout</ button>

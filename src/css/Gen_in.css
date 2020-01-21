@@ -44,10 +44,21 @@
 .heading{
  margin-top: 40px;
  margin-bottom: 30px;
+
 }
 .print{
     margin-top: 30px;
 }
-/* .background1{
-    background: url('../css/Gen_in.css') no-repeat;
-} */
+.background1{
+    background-color: rgb(142, 223, 223);
+    border:solid 1px cornsilk;
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  width: 1300px;
+  padding: 0;
+  /* margin-top: 70px; */
+}
+.vel{
+    background-color: rgb(142, 223, 223); 
+}

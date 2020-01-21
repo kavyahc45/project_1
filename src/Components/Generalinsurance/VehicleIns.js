@@ -4,7 +4,7 @@ import Navbar from '../Navbar/Navbar'
 import { vehicleHandle } from '../../Actions/VehicleAction';
 import { connect } from 'react-redux';
 import BrowserHistory from '../../Utils/BrowserHistory'
-import ReactToPrint from "react-to-print";
+
 
 class VehicleIns extends Component {
     constructor(props) {
@@ -30,8 +30,8 @@ class VehicleIns extends Component {
         const {name,vehicletype,vehiclename,price,premium}=this.state
         const payload = {name,vehicletype,vehiclename,price,premium}
         this.props.vehicleHandle(payload);
-        // this.props.priceHandle(payload);
-        this.setState({[e.target.name]:e.target.value});
+    //    this.setState({[e.target.name]:e.target.value});
+      
  
     }
     getUpdate=()=>{
@@ -48,6 +48,9 @@ class VehicleIns extends Component {
     payment = () =>{
         BrowserHistory.push('./checkoutform')
     } 
+    onHandleprint =()=>{
+        BrowserHistory.push('./print')
+    }
     
     render() {
         var temp=this.state.premium[this.state.index]
@@ -57,8 +60,9 @@ class VehicleIns extends Component {
                 <Navbar/>
                  <div id="main-registration-container">
                     <div class="row">
-                        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+                        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 "></div>
                         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div className="vel">
                             <h2 className='heading'>Vehicle</h2>
                             <div>
                                 <label  className="name1"><b>Name :</b></label>
@@ -88,13 +92,15 @@ class VehicleIns extends Component {
                                 <button onMouseOver={this.onHandleClick} hidden={!this.state.visible}onClick={this.getUpdate} className="name5">check premium</button>
                                 <button hidden={this.state.visible} onClick={this.payment}>Proceed to pay</button>
                             </div>
-                        </div>
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
-                    </div>
+                   
                     <div>
-                            {/* <button className="print"><b>Print </b></button> */}
-                            <Print VehicleIns ={el => (this.componentRef = el)} />
-                        </div>
+                    {/* <VehicleIns ref={el => (this.VehicleIns = el)} /> */}
+                            <button className="print" onClick={this.onHandleprint} ><b>Print </b></button>
+                            </div>
+                            </div>
+                            </div>
+                </div>
                 </div>  
             </div>
         );
@@ -104,19 +110,5 @@ const mapStateToProps = (state) => {
     // const { name, vehicletype,vehiclename,price,premium } = state.VehicleReducer
     // return { name, vehicletype,vehiclename,price,premium }
 }
-
-class Print extends Component {
-    render() {
-      return (
-        <div>
-          <ReactToPrint
-            trigger={() => <a href="#">Print this out!</a>}
-            content={() => this.VehicleIns}
-          />
-          {/* <VehicleIns ref={el => (this.VehicleIns = el)} /> */}
-        </div>
-      );
-    }
-  }
 
 export default connect(mapStateToProps,{vehicleHandle})(VehicleIns);
