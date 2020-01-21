@@ -30,12 +30,12 @@ class Generalinsurance extends Component {
             <div className="background1">
                 <Navbar/>
                 <div>
-                <h2 className="Ins">General Insurance</h2>
+                <h1 className="Ins">General Insurance</h1>
                  <select onChange={this.handlechange} name="insurance" className="crop">
                      <option>Crop Insurance</option>
                      <option>Vehicle Insurance</option>
                  </select>
-                 <div className="sub"><button onClick={this.handleclick} className="sub">Submit</button></div>
+                 <div className="sub"><button onClick={this.handleclick} className="sub"><b>Submit</b></button></div>
                  </div>
             </div>
         );

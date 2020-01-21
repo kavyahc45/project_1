@@ -11,10 +11,10 @@
   border:solid 1px cornsilk;
   background-position: center;
   background-size: cover;
-  height: 500px;
+  height: 600px;
   width: 1300px;
   padding: 0;
-  margin-top: 70px;
+  /* margin-top: 70px; */
   }
 .cul{
 color: rgb(27, 143, 216);

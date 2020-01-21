@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import BrowserHistory from '../../Utils/BrowserHistory';
 import { registerHandle } from '../../Actions/SingupAction';
 import './Sign.css';
+import logo from './20_300.jpg';
 
 
 
@@ -59,6 +60,7 @@ class SignupPage extends Component {
                     <div class="row background">
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        {/* <img src={logo} className=""></img> */}
                             <h3 className='heading1'>Signup</h3>
                             <label ><b>User Name :</b></label>
                             <input type="text" name="firstname" placeholder="User name"  onChange={this.onHandleChange} />
