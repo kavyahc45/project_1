@@ -48,9 +48,9 @@ class VehicleIns extends Component {
     payment = () =>{
         BrowserHistory.push('./checkoutform')
     } 
-    onHandleprint =()=>{
-        BrowserHistory.push('./print')
-    }
+    // onHandleprint =()=>{
+    //     BrowserHistory.push('./print')
+    // }
     
     render() {
         var temp=this.state.premium[this.state.index]
@@ -95,8 +95,8 @@ class VehicleIns extends Component {
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                    
                     <div>
-                    {/* <VehicleIns ref={el => (this.VehicleIns = el)} /> */}
-                            <button className="print" onClick={this.onHandleprint} ><b>Print </b></button>
+                    
+                            {/* <button className="print" onClick={this.onHandleprint} ><b>Print </b></button> */}
                             </div>
                             </div>
                             </div>

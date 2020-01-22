@@ -1,0 +1,10 @@
+.admin_portal{
+    display: grid;
+    grid-template-columns: 773px 339px;
+    justify-content: space-around;
+  
+
+}
+.vechile_heading{
+    margin-left: -334px;;
+}

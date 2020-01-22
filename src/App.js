@@ -8,8 +8,9 @@ import Generalinsurance from './Components/Generalinsurance/Generalinsurance';
 import VehicleIns from './Components/Generalinsurance/VehicleIns';
 import CropInu from './Components/Generalinsurance/CropInu';
 import Checkoutform from './Components/Checkoutform';
-import Print from './Components/Print';
 import HomePage from './Components/Home/HomePage';
+import Printout from './Components/PrintOut'
+import Admin from './Components/Admin';
 
 const PrivateRoute = ({ component: IncomingComponent, ...rest }) => (
     <Route
@@ -28,13 +29,14 @@ function App() {
                 <switch>
                     <Route exact path ='/' component={HomePage}></Route>
                     <Route exact path='/signup' component={SignupPage}></Route>
+                    <Route exact path='/print' component={Printout}></Route>
                      <Route exact path='/Login' component={LoginForm}></Route>
-                     <PrivateRoute exact path='/print' component={Print}></PrivateRoute>
+                     <Route exact path='/admin' component={Admin}></Route>
                      <PrivateRoute exact path ='/gen_inf' component ={Generalinsurance}></PrivateRoute>
                      <PrivateRoute exact path ='/vehicle' component ={VehicleIns}></PrivateRoute>
                      <PrivateRoute exact path ='/crop' component ={CropInu}></PrivateRoute>
                      <PrivateRoute exact path ='/checkoutform' component={Checkoutform}></PrivateRoute>
-                     {/* <PrivateRoute exact path ='/print' component ={Print}></PrivateRoute> */}
+                   
                 </switch>
             </Router>
 

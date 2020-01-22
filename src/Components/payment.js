@@ -27,9 +27,14 @@ class CheckoutForm extends Component {
   onHandleClick() {
     BrowserHistory.push('/gen_inf');
 }
+printFunction(){
+  BrowserHistory.push('/print')
+}
 
   render() {
-    if (this.state.complete) return <h1>Payment Complete</h1>;
+    if (this.state.complete) return (<h1>Payment Complete</h1>,
+    <button onClick={this.printFunction}> print</button>);
+    
     
     return (
         <div class="container">
