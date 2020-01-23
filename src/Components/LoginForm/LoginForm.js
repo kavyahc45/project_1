@@ -8,6 +8,7 @@ class LoginForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            role:'',
             password: '',
             email: '',
             passwordError: '',

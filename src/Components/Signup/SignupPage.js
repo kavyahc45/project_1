@@ -18,6 +18,7 @@ class SignupPage extends Component {
             firstname: '',
             email: '',
             password: '',
+            role:'',
             ferr: '',
             uerr: '',
             perr: ''

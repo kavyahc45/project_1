@@ -16,8 +16,8 @@ class Admin extends Component {
                 <h1>Admin Portal</h1>
             
                 <div className="admin_portal">
-                  <div><h1 className="vechile_heading">vechile insurence</h1></div>
-                  <div><h1>Crop insurence</h1></div>
+                  <div><h2 className="vechile_heading">Vehicle Insurance</h2></div>
+                  <div><h2>Crop Insurance</h2></div>
                <div ><Vehicle /></div> 
               
               <div><Crop/></div>

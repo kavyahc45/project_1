@@ -29,14 +29,13 @@ function App() {
                 <switch>
                     <Route exact path ='/' component={HomePage}></Route>
                     <Route exact path='/signup' component={SignupPage}></Route>
-                    <Route exact path='/print' component={Printout}></Route>
                      <Route exact path='/Login' component={LoginForm}></Route>
-                     <Route exact path='/admin' component={Admin}></Route>
+                     <PrivateRoute exact path='/admin' component={Admin}></PrivateRoute>
                      <PrivateRoute exact path ='/gen_inf' component ={Generalinsurance}></PrivateRoute>
                      <PrivateRoute exact path ='/vehicle' component ={VehicleIns}></PrivateRoute>
                      <PrivateRoute exact path ='/crop' component ={CropInu}></PrivateRoute>
                      <PrivateRoute exact path ='/checkoutform' component={Checkoutform}></PrivateRoute>
-                   
+                     <PrivateRoute exact path='/print' component={Printout}></PrivateRoute>
                 </switch>
             </Router>
 
