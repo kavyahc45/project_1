@@ -33,7 +33,7 @@ printFunction(){
 
   render() {
     if (this.state.complete) return (<h1>Payment Complete</h1>,
-    <button onClick={this.printFunction}> print</button>);
+    <button onClick={this.printFunction} class="pay"> print</button>);
     
     
     return (

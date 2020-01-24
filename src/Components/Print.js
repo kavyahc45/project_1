@@ -59,7 +59,7 @@ return (
 </div>
 <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
 </div>
-<button onClick={this.onHandleClick}>Home</button>
+<button class="pay" onClick={this.onHandleClick}>Home</button>
 </div>
 );
 }

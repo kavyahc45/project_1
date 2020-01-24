@@ -5,45 +5,49 @@
 }
 .Ins{
  margin-top: 80px;
- color: rgb(27, 143, 216);
+ color: black;
 }
 .crop{
     margin-top: 50px;
-    color: rgb(27, 143, 216);
+    color: black;
+  
+    
 }
 .sub{
  margin-top: 20px;
- color: rgb(27, 143, 216);
+ color: black;
 
 }
 .heading{
-    color: rgb(27, 143, 216);
+    color: black;
+    /* border-radius: 5ch; */
+    
 }
-.name1{
+/* .name1{
     margin-bottom: 30px;
-    color: rgb(27, 143, 216);
+    color: black;
 }
 .name2{
     margin-bottom: 30px;
-    color: rgb(27, 143, 216);
+    color: black;
 }
 .name3{
     margin-bottom: 30px;
-    color: rgb(27, 143, 216);
+    color: black;
 }
 .name4{
-    color: rgb(27, 143, 216);
+    color: black;
 }
 .name5{
     margin-top: 30px;
-    color: rgb(27, 143, 216);
-}
+    color: black;
+} */
 .print{
-    color: rgb(27, 143, 216);
+    color: black;
 }
 .heading{
- margin-top: 40px;
- margin-bottom: 30px;
+ margin-top: 120px;
+ /* margin-bottom: 30px; */
 
 }
 .print{
@@ -59,6 +63,30 @@
   padding: 0;
   /* margin-top: 70px; */
 }
-.vel{
+/* .vel{
     background-color: rgb(142, 223, 223); 
+    
+} */
+.main{
+    background-color: rgb(142, 223, 223);
+    height: 570px;
+    /* border:solid 1px cornsilk;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    width: 1300px;
+    padding: 0;
+    margin-top: 70px; */
 }
+.cropinu{
+    background-color: rgb(142, 223, 223);
+    height: 600px;
+}
+body{
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+
+}
+/* .class1{
+    margin-left: 100px;
+} */

@@ -3,7 +3,8 @@ import axios from 'axios';
 import Navbar from '../Navbar/Navbar'
 import { vehicleHandle } from '../../Actions/VehicleAction';
 import { connect } from 'react-redux';
-import BrowserHistory from '../../Utils/BrowserHistory'
+import BrowserHistory from '../../Utils/BrowserHistory';
+import '../../css/Vehicle.css';
 
 
 class VehicleIns extends Component {
@@ -48,29 +49,28 @@ class VehicleIns extends Component {
     payment = () =>{
         BrowserHistory.push('./checkoutform')
     } 
-    // onHandleprint =()=>{
-    //     BrowserHistory.push('./print')
-    // }
     
     render() {
         var temp=this.state.premium[this.state.index]
         console.log(temp)
         return (
+           
             <div>
-                <Navbar/>
+                
                  <div id="main-registration-container">
-                    <div class="row">
+                 <Navbar/>
+                    <div class="row main ">
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 "></div>
                         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <div className="vel">
                             <h2 className='heading'>Vehicle</h2>
-                            <div>
+                            <div >
                                 <label  className="name1"><b>Name :</b></label>
-                                <input type="text" name="name" onChange={this.handlechange}  placeholder="Please enter the name" />
+                                <input type="text" name="name" class="class1" onChange={this.handlechange}  placeholder="Please enter the name" />
                             </div>
                             <div>
                                 <label  className="name2" ><b>Vehicle type :</b></label>
-                                <select name="vehicletype" onChange={this.handlechange}>
+                                <select class="class2" name="vehicletype" onChange={this.handlechange}>
                                     <option >Two Wheller </option>
                                     <option>Four Wheller </option>
                                 </select>
@@ -94,13 +94,11 @@ class VehicleIns extends Component {
                             </div>
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                    
-                    <div>
-                    
-                            {/* <button className="print" onClick={this.onHandleprint} ><b>Print </b></button> */}
-                            </div>
-                            </div>
-                            </div>
-                </div>
+                          <div>
+                         </div>
+                        </div>
+                      </div>
+                 </div>
                 </div>  
             </div>
         );

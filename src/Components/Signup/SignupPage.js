@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import BrowserHistory from '../../Utils/BrowserHistory';
 import { registerHandle } from '../../Actions/SingupAction';
 import './Sign.css';
-import logo from './20_300.jpg';
+import logo from './imgdownlogo.png';
 
 
 
@@ -61,15 +61,15 @@ class SignupPage extends Component {
                     <div class="row background">
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        {/* <img src={logo} className=""></img> */}
+                        <img src={logo} className="logoimg1"></img>
                             <h3 className='heading1'>Signup</h3>
-                            <label ><b>User Name :</b></label>
-                            <input type="text" name="firstname" placeholder="User name"  onChange={this.onHandleChange} />
+                            <label ><b>User Name :</b></label><br></br>
+                            <input type="text" name="firstname" placeholder="User name" className="input_field"  onChange={this.onHandleChange} />
                             <p className="red" >{this.state.ferr}</p>
-                            <label><b>Email :</b></label>
+                            <label><b>Email :</b></label><br></br>
                             <input type="text" placeholder="Email" name="email" className="emailinput" onChange={this.onHandleChange} />
                             <p className="red " >{this.state.uerr}</p>
-                            <label><b>Password :</b></label>
+                            <label><b>Password :</b></label><br></br>
                             <input type="password" placeholder="Password" name="password" className=" passwordinput" onChange={this.onHandleChange} />
                             <p className="red " >{this.state.perr}</p>
                             <button onClick={this.onHandleClick} >Register</button>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BrowserHistory from '../../Utils/BrowserHistory';
 import '../../css/Gen_in.css';
 import Navbar from '../Navbar/Navbar';
+import logo from './imgdownlogo.png';
 
 class Generalinsurance extends Component {
     state={
@@ -29,6 +30,7 @@ class Generalinsurance extends Component {
         return (
             <div className="background1">
                 <Navbar/>
+                <img src={logo} className="logoimg1"></img>
                 <div>
                 <h1 className="Ins">General Insurance</h1>
                  <select onChange={this.handlechange} name="insurance" className="crop">

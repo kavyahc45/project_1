@@ -48,7 +48,7 @@ class CropInu extends Component {
             <div>
                 <Navbar/>
                 <div id="main-registration-container">
-                    <div class="row">
+                    <div class="row  cropinu">
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div className="vel">

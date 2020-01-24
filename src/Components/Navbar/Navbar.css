@@ -3,12 +3,37 @@
   padding: 10px 0;
 }
 .navbackground1{
-  background-color: rgb(65, 181, 219);
+  background-color: rgb(47, 101, 218);
   padding: 10px 0;
 }
+
+/* .about1{
+border-radius: 50px;
+} */
+
 .abtimg{
-margin-top: 40px;
+/* margin-top: 40px; */
+height: 500px;
+}
+.readmore{
+  margin: 20px;
+  color: black;
+}
+.hide{
+color: black;
 }
 .home{
-  background-color: rgb(225, 232, 235);
+  background: url('../Home/insurance-hand.webp') no-repeat;
+border:solid 1px cornsilk;
+background-position: center;
+background-size: cover;
+height: 600px;
+width: 1300px;
+padding: 0;
+
+}
+.logoimg{
+border-radius: 80px;
+width: 50px;
+margin-right: 100px;
 }

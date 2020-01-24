@@ -19,3 +19,21 @@
 .cul{
 color: rgb(27, 143, 216);
 }
+.logoimg1{
+  margin-top: 20px;
+  border-radius: 100px;
+  width: 80px;
+  }
+  .input_field{
+margin-left: 20px;
+  }
+  .emailinput{
+    margin-left: 20px;
+}
+.passwordinput{
+  margin-left: 15px;
+}
+.buttoncancel{
+margin-left: 10px;
+}
+  
