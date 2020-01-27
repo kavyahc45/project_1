@@ -2,13 +2,14 @@ import axios from 'axios';
 import BrowserHistory from '../Utils/BrowserHistory';
 
 export function loginHandle(payload) {
+  console.log(payload);
   const options = {
     url: 'http://localhost:4002/Signin',
     method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json;charset=UTF-8'
-    },
+    // headers: {
+    //   'Accept': 'application/json',
+    //   'Content-Type': 'application/json;charset=UTF-8'
+    // },
     data: payload
   };
 
@@ -19,6 +20,7 @@ export function loginHandle(payload) {
         console.log(response.status);
         sessionStorage.setItem('authentication', response.data.token)
         sessionStorage.setItem('role', response.data.role)
+        sessionStorage.setItem('email', response.data.email)
         if (!response.data.Admin) {
           BrowserHistory.push('/gen_inf')
         }

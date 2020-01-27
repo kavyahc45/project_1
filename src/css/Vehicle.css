@@ -1,16 +1,49 @@
-.name1{
-    margin-bottom: 30px;
-    color: black;
-}
 
-.class1{
-    margin-left: 38px;
-}
-/* .name2{
-    margin-bottom: 30px;
-    color: black;
+/* .main{ */
+    /* background: url('../Components/Home/insurance-hand.webp') no-repeat; */
+    /* background-color: rgb(205, 205, 221);
+    border:solid 1px cornsilk;
+background-position: center;
+background-size: cover;
+height: 600px;
+width: 1400px;
+padding: 0;
+
 } */
-
-.class2{
-    margin-left: 38px;
+.form_login{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
 }
+
+.form_sigup{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+}
+.checkname{
+   height: 30px;
+  width: 217px;
+}
+.cropinu{
+    background-color: rgb(142, 223, 223);
+    /* height: 400px; */
+    margin: 100px;
+    margin-left: 400px;
+    margin-right: 300px;
+    border-radius: 50px;
+}
+.main{
+    background-color: rgb(142, 223, 223);
+    /* height: 400px; */
+    margin: 100px;
+    margin-left: 400px;
+    margin-right: 300px; 
+    border-radius: 50px;
+   
+}
+.namecheck{
+    width: 217px;
+}
+
+

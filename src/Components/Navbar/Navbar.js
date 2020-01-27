@@ -1,13 +1,33 @@
 import React, { Component } from 'react';
 import './Navbar.css'
 import BrowserHistory from '../../Utils/BrowserHistory';
+import axios from 'axios';
 
 class Navbar extends Component {
-  state={
-    visible:false
-  }
+
+   constructor(props) {
+        super(props);
+        this.state = {
+          email: '',
+          data:[],
+          visible:false
+        }
+      }
+
+      handlechange= (event) =>{
+        this.setState({[event.target.email]:event.target.value})
+       
+    }
+    onHandleClick = (e) => {
+      const {email}=this.state
+      const payload = {email}
+      this.props.loginHandle(payload);
+    }
+
   logout=()=>{
     sessionStorage.removeItem('authentication')
+    sessionStorage.removeItem('role')
+    sessionStorage.removeItem('email')
     BrowserHistory.push('/')
   }
   onHandleClick=()=>{
@@ -20,7 +40,10 @@ class Navbar extends Component {
   
   componentDidMount=()=>{
     sessionStorage.getItem('role')=='admin' ? this.setState({visible: false}) : this.setState({visible: true})
+    
   }
+  
+
   
 
   render() {
@@ -31,11 +54,18 @@ class Navbar extends Component {
           < button  onClick={this.onHandleClick}>Home</ button>
         </div>
 
-         <div className="col-xs-7 col-sm-7 col-md-7 col-lg-7 "></div>
+         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+        </div>
+
+         <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 nave">
+         {sessionStorage.getItem('email')}
+           </div>
 
          <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 ">
           < button hidden={this.state.visible}  onClick={this.onHandleClick_admin}>Admin</ button>
           </div>
+
+        
 
         <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 ">
           < button  onClick={this.logout}>Logout</ button>

@@ -34,12 +34,19 @@ class LoginForm extends Component {
         else temp=temp+1
         if(temp==2){
             this.props.loginHandle(payload);
+            // BrowserHistory.push('/gen_inf')
         }       
     }
 
     handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     }
+
+    confirmmail=(e)=>{
+        sessionStorage.setItem('change',this.state.email)
+        BrowserHistory.push('/confirmmail');
+        }
+
     render() {
         return (
             <div className="signupbody">
@@ -55,13 +62,13 @@ class LoginForm extends Component {
                             <label className="font"><b>Password:</b></label><br></br>
                             <input type='password' name='password' onChange={this.handleChange} placeholder='Password..'/>
                             <p className='red'>{this.state.passwordError}</p>
-                            <button type="button" class="cul" onClick={this.onHandleClick}><b>Login</b></button>
+                            <button type="button" class="cul" onClick={this.onHandleClick} ><b>Login</b></button>
                         </div>
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                     </div>
                 </div>
-
-
+                  <div>
+                <a onClick={this.confirmmail} className="forgetpassword">Forget Password</a></div>
 
 
                 {/* <h1 className="loginhead">Login </h1>

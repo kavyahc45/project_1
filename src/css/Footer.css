@@ -1,0 +1,15 @@
+.footer{
+    background-color: rgb(47, 101, 218);
+    height: 50px;
+    width: 100%;
+    padding:10px;;
+    font-size: 20px;
+    color: paleturquoise;
+    display: grid;
+    grid-template-columns:200px 830px 250px ;
+    bottom: 0%;
+    margin-top: 500px;;
+    }
+    .down{
+    margin-top:15px;
+    }

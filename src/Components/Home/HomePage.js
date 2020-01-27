@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Nav from '../Navbar/Nav';
 import about from './diversity.webp';
+import FooterComp from '../Navbar/FooterComp';
 
 
 class HomePage extends Component {
@@ -22,6 +23,9 @@ class HomePage extends Component {
         return (
             <div className="home">
                <Nav/>
+          <FooterComp/>
+               
+              
              {/* {
           this.state.showMe?
           <div className="hide"><b>Insurance is a means of protection from financial loss. 

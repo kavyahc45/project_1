@@ -11,6 +11,7 @@ import Checkoutform from './Components/Checkoutform';
 import HomePage from './Components/Home/HomePage';
 import Printout from './Components/PrintOut'
 import Admin from './Components/Admin';
+import ForgetPassword from './Components/LoginForm/ForgetPassword';
 
 const PrivateRoute = ({ component: IncomingComponent, ...rest }) => (
     <Route
@@ -30,6 +31,7 @@ function App() {
                     <Route exact path ='/' component={HomePage}></Route>
                     <Route exact path='/signup' component={SignupPage}></Route>
                      <Route exact path='/Login' component={LoginForm}></Route>
+                     <Route exact path='/confirmmail' component={ForgetPassword}></Route>
                      <PrivateRoute exact path='/admin' component={Admin}></PrivateRoute>
                      <PrivateRoute exact path ='/gen_inf' component ={Generalinsurance}></PrivateRoute>
                      <PrivateRoute exact path ='/vehicle' component ={VehicleIns}></PrivateRoute>

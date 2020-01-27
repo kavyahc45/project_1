@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import BrowserHistory from '../../Utils/BrowserHistory'
 import Navbar from '../Navbar/Navbar';
+import '../../css/Vehicle.css';
+
 
 class CropInu extends Component {
     constructor(props) {
@@ -53,20 +55,16 @@ class CropInu extends Component {
                         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div className="vel">
                             <h2 className='heading' >Crop</h2>
-                            <div>
-                                <label className="name1"><b>Name :</b></label>
-                                <input type="text" name="name" onChange={this.handlechange}  placeholder="Please enter the name" />
-                            </div>
-                            <div>
-                                <label className="name2" ><b>Crop Name :</b></label>
-                                <select name="cropname" onChange={this.handlechange}>
+                            <div className="form_sigup">
+                            <div><label className="name1"><b>Name :</b></label></div>
+                              <div>  <input type="text" name="name" onChange={this.handlechange}  placeholder="Please enter the name" /></div>
+                            <div> <label className="name2" ><b>Crop Name :</b></label></div>
+                                <div><select name="cropname" onChange={this.handlechange}>
                                     <option >Paddy </option>
                                     <option >Sugar cane </option>
-                                </select>
-                            </div>
-                            <div >  
-                                <label  className="name3"><b>Area :</b></label>
-                                <input type="text" name="area" onChange={this.handlechange}  placeholder="Please enter the area" />
+                                </select> </div>
+                            <div >    <label  className="name3"><b>Area :</b></label></div>
+                               <div> <input type="text" name="area" onChange={this.handlechange}  placeholder="Please enter the area" />
                             </div>
                             <div hidden={this.state.visible}> 
                                 <label ><b>Price :</b></label>
@@ -76,11 +74,10 @@ class CropInu extends Component {
                                 <label ><b>Premium :</b></label>
                                 <b>{premium}</b>
                             </div>
-                            <button onMouseOver={this.onHandleClick} hidden={!this.state.visible}onClick={this.getUpdate} className="name4">check premium</button>
+                            <button onMouseOver={this.onHandleClick} hidden={!this.state.visible}onClick={this.getUpdate} className="checkname">check premium</button>
                             <button hidden={this.state.visible} onClick={this.payment}>Proceed to pay</button>
-                       
-                        
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+                        </div>
                         </div>
                     </div>
                   </div>
