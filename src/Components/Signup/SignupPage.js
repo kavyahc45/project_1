@@ -4,6 +4,8 @@ import BrowserHistory from '../../Utils/BrowserHistory';
 import { registerHandle } from '../../Actions/SingupAction';
 import './Sign.css';
 import logo from './imgdownlogo.png';
+import Navbarlog from '../Navbar/Navbarlog';
+
 
 
 
@@ -57,6 +59,7 @@ class SignupPage extends Component {
     render() {
         return (
             <div className="signupbody">
+              <Navbarlog/>
                 <div id="main-registration-container">
                     <div class="row background">
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>

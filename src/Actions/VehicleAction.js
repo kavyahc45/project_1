@@ -15,6 +15,6 @@ console.log(response.status);
 // BrowserHistory.push('./form')
 
 });
-// dispatch({type:'',payload:payload});
+dispatch({type:'',payload:payload});
 }
 }

@@ -31,7 +31,7 @@ class Navbar extends Component {
     BrowserHistory.push('/')
   }
   onHandleClick=()=>{
-    BrowserHistory.push('/')
+    BrowserHistory.push('/gen_inf')
   }
 
   onHandleClick_admin=()=>{

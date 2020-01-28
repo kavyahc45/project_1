@@ -26,7 +26,7 @@ padding: 0;
   width: 217px;
 }
 .cropinu{
-    background-color: rgb(142, 223, 223);
+    background-color: rgb(138, 185, 255);
     /* height: 400px; */
     margin: 100px;
     margin-left: 400px;
@@ -34,7 +34,7 @@ padding: 0;
     border-radius: 50px;
 }
 .main{
-    background-color: rgb(142, 223, 223);
+    background-color: rgb(138, 185, 255);
     /* height: 400px; */
     margin: 100px;
     margin-left: 400px;
@@ -45,5 +45,13 @@ padding: 0;
 .namecheck{
     width: 217px;
 }
-
+.image{
+    background: url('../Components/Signup/istock.jpg') no-repeat;
+    border:solid 1px cornsilk;
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  width: 1300px;
+  padding: 0;
+}
 

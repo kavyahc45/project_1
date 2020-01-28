@@ -12,6 +12,7 @@ class Generalinsurance extends Component {
         this.setState({[event.target.name]:event.target.value})
     }
     handleclick=()=>{
+        sessionStorage.setItem('instype',this.state.insurance)
         switch(this.state.insurance){
             case 'Crop Insurance': BrowserHistory.push('/crop')
             break;

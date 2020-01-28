@@ -4,7 +4,7 @@
     width: 100%;
     padding:10px;;
     font-size: 20px;
-    color: paleturquoise;
+    color: rgb(196, 238, 238);
     display: grid;
     grid-template-columns:200px 830px 250px ;
     bottom: 0%;

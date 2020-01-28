@@ -10,24 +10,27 @@ this.state = {
 name: [],
 cropname:[],
 area:[],
-// vehiclename:[],
-// vehicletype:[],
 index:[],
 price: [],
 premium: [],
+
+visible:true,
 
 }
 }
 
 componentDidMount=()=>{
 axios.get('http://localhost:4002/cinsurencedetiles')
+
 .then(response => {
 this.setState({ index:response.data.length-1 ,
 name:response.data.map(data=>data.name),
 cropname:response.data.map(data=>data.cropname),
 area:response.data.map(data=>data.area),
 premium:response.data.map(data=>data.premium),
-price:response.data.map(data=>data.price)});
+price:response.data.map(data=>data.price),
+
+});
 })
 .catch(function (error) {
 console.log(error);
@@ -35,8 +38,8 @@ console.log(error);
 
 }
 
-onHandleClick=()=>{
-  BrowserHistory.push('/')
+onHandleClick() {
+  BrowserHistory.push('/gen_inf');
 }
 
 render() {
@@ -45,6 +48,9 @@ var cropname=this.state.cropname[this.state.index]
 var area=this.state.area[this.state.index]
 var price=this.state.price[this.state.index]
 var premium=this.state.premium[this.state.index]
+
+
+
 
 return (
 <div>
@@ -56,10 +62,11 @@ return (
 <h1> Area:{area}</h1>
 <h1>Price:{price}</h1>
 <h1>Premium:{premium}</h1>
+
 </div>
 <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
 </div>
-<button class="pay" onClick={this.onHandleClick}>Home</button>
+<button class="pay" onClick={this.onHandleClick} >Home</button>
 </div>
 );
 }

@@ -4,6 +4,9 @@ import './LoginForm.css'
 import { connect } from 'react-redux';
 import { loginHandle } from '../../Actions/LoginAction';
 import logo from './imgdownlogo.png';
+import Navbarlog from '../Navbar/Navbarlog';
+
+
 
 
 class LoginForm extends Component {
@@ -50,10 +53,12 @@ class LoginForm extends Component {
     render() {
         return (
             <div className="signupbody">
+              <Navbarlog/>
                 <div id="main-registration-container">
                     <div class="row background">
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                           
                         <img src={logo} className="logoimg1"></img>
                             <h3 className='heading1'>Login</h3>
                             <label className=""><b>Email:</b></label><br></br>

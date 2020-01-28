@@ -26,6 +26,7 @@ class Crop extends Component {
               <th> Area</th>
               <th>Price</th>
               <th>Premium</th>
+              
             </tr>
             {this.state.data.map(name =>
             <tr>
@@ -34,7 +35,7 @@ class Crop extends Component {
               <td>{name.area}</td>
               <td>{name.price}</td>
               <td>{name.premium}</td>
-
+              
             </tr>   
             )}
           </table>

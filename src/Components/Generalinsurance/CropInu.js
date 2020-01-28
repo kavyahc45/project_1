@@ -17,6 +17,10 @@ class CropInu extends Component {
             index:'',
             price: [],
             premium: [],
+
+           
+            
+            
             visible:true
         }
     }
@@ -28,6 +32,25 @@ class CropInu extends Component {
         const {name,cropname,area,price,premium}=this.state
         const payload = {name,cropname,area,price,premium}
         this.props.cropHandle(payload);
+        // var temp=0;
+        // e.preventDefault();
+
+        // if (this.state.name.length != 0 && this.state.name.match(/^[A-Za-z]{5,15}$/) && this.state.firstname != null){
+        //     temp=temp+1;
+        // }
+        // else
+        //     this.setState({nerr:"name required"})
+       
+        // if (this.state.area.length != 0 && this.state.area.match(/^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]$/) && this.state.email != null){
+        //      temp=temp+1;
+        //     }
+        // else
+        //         this.setState({aerr:"area required"})
+        
+        // if(temp==2){
+        //     this.props.cropHandle(payload);
+        // }
+
     }
     getUpdate=()=>{
         axios.get('http://localhost:4002/cinsurencedetiles')
@@ -50,37 +73,44 @@ class CropInu extends Component {
             <div>
                 <Navbar/>
                 <div id="main-registration-container">
+                    <div className="image">
                     <div class="row  cropinu">
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div className="vel">
                             <h2 className='heading' >Crop</h2>
                             <div className="form_sigup">
-                            <div><label className="name1"><b>Name :</b></label></div>
-                              <div>  <input type="text" name="name" onChange={this.handlechange}  placeholder="Please enter the name" /></div>
-                            <div> <label className="name2" ><b>Crop Name :</b></label></div>
+                            <div><label className=""><b>Name :</b></label></div>
+                              <div>  <input type="text" name="name" onChange={this.handlechange}  placeholder="Please enter the name" />
+                              <p className="red" >{this.state.nerr}</p></div>
+                            <div> <label className="name" ><b>Crop Name :</b></label></div>
                                 <div><select name="cropname" onChange={this.handlechange}>
                                     <option >Paddy </option>
                                     <option >Sugar cane </option>
                                 </select> </div>
-                            <div >    <label  className="name3"><b>Area :</b></label></div>
+                            <div >    <label  className="name"><b>Area :</b></label></div>
                                <div> <input type="text" name="area" onChange={this.handlechange}  placeholder="Please enter the area" />
-                            </div>
+                               <p className="red" >{this.state.aerr}</p></div>
+                            {/* <div> <label> <b>Date</b></label></div>
+                            <div> <input type="date" name="area"  /></div> */}
                             <div hidden={this.state.visible}> 
                                 <label ><b>Price :</b></label>
                                 <b>{price}</b>
                             </div>
+                           
                             <div hidden={this.state.visible}>
                                 <label ><b>Premium :</b></label>
                                 <b>{premium}</b>
                             </div>
                             <button onMouseOver={this.onHandleClick} hidden={!this.state.visible}onClick={this.getUpdate} className="checkname">check premium</button>
                             <button hidden={this.state.visible} onClick={this.payment}>Proceed to pay</button>
+                          
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                         </div>
                         </div>
                     </div>
                   </div>
+                </div>
                 </div>
             </div>
         );
