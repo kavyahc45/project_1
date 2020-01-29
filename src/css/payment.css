@@ -17,12 +17,22 @@
     margin: 20px 0;
     padding: 0;
   } */
+  .payment{
+    background: url('../Components/Signup/istock.jpg') no-repeat;
+    border:solid 1px cornsilk;
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+  width: 1300px;
+  padding: 0;
+  }
 
   .Checkout {
     margin: 0 auto;
     max-width: 800px;
     box-sizing: border-box;
     padding: 0 5px;
+
   }
 
   /* label {

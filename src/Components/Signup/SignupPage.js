@@ -60,6 +60,7 @@ class SignupPage extends Component {
         return (
             <div className="signupbody">
               <Navbarlog/>
+            
                 <div id="main-registration-container">
                     <div class="row background">
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>

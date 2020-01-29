@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import  './LoginForm.css';
+import BrowserHistory from '../../Utils/BrowserHistory';
 
 class ForgetPassword extends Component {
 
@@ -29,6 +30,9 @@ class ForgetPassword extends Component {
           .catch(err => console.log(err))
         window.location.reload();
       }
+      onHandleClicks = (e) => {
+        BrowserHistory.push('/login');
+    }
  
 
     render() {
@@ -36,7 +40,8 @@ class ForgetPassword extends Component {
             <div className="forget" >
                 <label className="newpass"><h2>New Password</h2></label><br/><br/>
                 <input type="text" onChange={this.handlechange} placeholder="enter new password"></input><br/><br/>
-            <button onClick={this.changepassw} name="password" className="btn btn-danger">change password</button>
+            <button onClick={this.changepassw} name="password" className="btn btn-danger">change password</button><br/><br/>
+            <button onClick={this.onHandleClicks} className="blogin">Back to Login</button>
             </div>
         );
     }

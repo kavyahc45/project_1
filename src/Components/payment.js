@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { CardElement, injectStripe } from 'react-stripe-elements';
 import  BrowserHistory from '../Utils/BrowserHistory';
-import '../css/payment.css'
 
 class CheckoutForm extends Component {
   constructor(props) {
@@ -33,12 +32,12 @@ printFunction(){
 
   render() {
     if (this.state.complete) return (<h1>Payment Complete</h1>,
-    <button onClick={this.printFunction} class="pay"> print</button>);
-    
+    <button onClick={this.printFunction} class="pay"> Print</button>);
     
     return (
+      <div className="payment">
         <div class="container">
-          <div class="row">
+          <div class="row ">
             <div class="col-sm-3 col-lg-3 col-md-3 col-xs-3"></div>
             <div class="col-sm-6 col-lg-6 col-md-6 col-xs-6">
               <div className="Checkout">
@@ -50,6 +49,7 @@ printFunction(){
             <div class="col-sm-3 col-lg-3 col-md-3 col-xs-3"></div>
           </div>
           <button class="pay" onClick={this.onHandleClick}>Home</button>
+          </div>
           </div>
     );
   }

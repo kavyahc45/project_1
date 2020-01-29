@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BrowserHistory from '../../Utils/BrowserHistory';
 import logo from './download.png';
+import './Navbar.css'
 
 class Nav extends Component {
 
@@ -22,11 +23,11 @@ class Nav extends Component {
 
          <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8 "></div>
          <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 ">
-          < button onClick={this.onHandleClick_signup}>Signup</ button>
+          < button onClick={this.onHandleClick_signup} className="nsignup">Signup</ button>
         </div>
 
         <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 ">
-          < button onClick={this.onHandleClick_login}>Login</ button>
+          < button onClick={this.onHandleClick_login} className="nsignup">Login</ button>
         </div>
         <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 "></div>
       </div>

@@ -10,7 +10,7 @@ class Admin extends Component {
     
     render() {
         return (
-            <div>
+            <div className="url">
              
                 <Navbar/>
                 <h1>Admin Portal</h1>

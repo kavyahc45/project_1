@@ -1,15 +1,19 @@
 .footer{
-    background-color: rgb(47, 101, 218);
-    height: 50px;
+    background-color: rgb(77, 130, 243);
+    height: 55px;
     width: 100%;
-    padding:10px;;
+    padding:13px;;
     font-size: 20px;
     color: rgb(196, 238, 238);
     display: grid;
     grid-template-columns:200px 830px 250px ;
     bottom: 0%;
-    margin-top: 500px;;
+    margin-top: 514px;;
     }
     .down{
-    margin-top:15px;
+    margin-top:16px;
     }
+.blogin{
+    border-radius: 5pc;
+    background-color: rgb(111, 221, 221);
+}

@@ -4,6 +4,7 @@ import '../../css/Gen_in.css';
 import Navbar from '../Navbar/Navbar';
 import logo from './imgdownlogo.png';
 
+
 class Generalinsurance extends Component {
     state={
         insurance:'Crop Insurance'
@@ -31,6 +32,7 @@ class Generalinsurance extends Component {
         return (
             <div className="background1">
                 <Navbar/>
+               
                 <img src={logo} className="logoimg1"></img>
                 <div>
                 <h1 className="Ins">General Insurance</h1>
@@ -40,6 +42,7 @@ class Generalinsurance extends Component {
                  </select>
                  <div className="sub"><button onClick={this.handleclick} className="sub"><b>Submit</b></button></div>
                  </div>
+               
             </div>
         );
     }

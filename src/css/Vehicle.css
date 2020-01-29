@@ -24,6 +24,8 @@ padding: 0;
 .checkname{
    height: 30px;
   width: 217px;
+  border-radius: 5pc;
+  background-color: rgb(111, 221, 221);
 }
 .cropinu{
     background-color: rgb(138, 185, 255);
@@ -44,6 +46,8 @@ padding: 0;
 }
 .namecheck{
     width: 217px;
+    border-radius: 5pc;
+    background-color: rgb(111, 221, 221);
 }
 .image{
     background: url('../Components/Signup/istock.jpg') no-repeat;

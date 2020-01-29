@@ -8,3 +8,13 @@
 .vechile_heading{
     margin-left: -334px;
 }
+
+.url{
+    background: url('../Components/Signup/istock.jpg') no-repeat;
+    border:solid 1px cornsilk;
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+  width: 1300px;
+  padding: 0;
+  }

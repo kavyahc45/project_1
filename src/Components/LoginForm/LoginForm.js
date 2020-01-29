@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { loginHandle } from '../../Actions/LoginAction';
 import logo from './imgdownlogo.png';
 import Navbarlog from '../Navbar/Navbarlog';
+import FooterComp from '../Navbar/FooterComp';
+
 
 
 
@@ -37,12 +39,16 @@ class LoginForm extends Component {
         else temp=temp+1
         if(temp==2){
             this.props.loginHandle(payload);
-            // BrowserHistory.push('/gen_inf')
+            
         }       
     }
 
     handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
+    }
+
+    onHandleClicksCancel = (e) => {
+        BrowserHistory.push('/signup');
     }
 
     confirmmail=(e)=>{
@@ -54,6 +60,7 @@ class LoginForm extends Component {
         return (
             <div className="signupbody">
               <Navbarlog/>
+          
                 <div id="main-registration-container">
                     <div class="row background">
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
@@ -68,36 +75,15 @@ class LoginForm extends Component {
                             <input type='password' name='password' onChange={this.handleChange} placeholder='Password..'/>
                             <p className='red'>{this.state.passwordError}</p>
                             <button type="button" class="cul" onClick={this.onHandleClick} ><b>Login</b></button>
+                            <button onClick={this.onHandleClicksCancel}  className="buttoncancel">Cancel</button>
                         </div>
+                       
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                     </div>
                 </div>
                   <div>
-                <a onClick={this.confirmmail} className="forgetpassword">Forget Password</a></div>
-
-
-                {/* <h1 className="loginhead">Login </h1>
-                <form onSubmit={this.handleSubmit} className='signup_form'>
-                    <div className=" row signup_box">
-
-                        <div>
-                            <div className="loginform">
-                                <label className="font">Email:</label>
-                                <input type='text' name='email' onChange={this.handleChange} placeholder='email..'></input>
-                            </div>
-                            <p className='red'>{this.state.emailError}</p>
-                            <div className="loginform">
-                                <label className="font">Password:</label>
-                                <input type='password' name='password' onChange={this.handleChange} className='input_box' placeholder='Password..'></input>
-                            </div>
-                            <p className='red'>{this.state.passwordError}</p>
-                            <button type="button" class="btn btn-success signup_btn" onClick={this.onHandleClick}>Login</button>
-                        </div>
-                    </div>
-                </form> */}
-                {/* <p>
-      {this.props.password}
-      {this.props.email}</p> */}
+                <a onClick={this.confirmmail} className="forgetpassword"><b>Forget Password</b></a></div>
+             
             </div>
 
         );

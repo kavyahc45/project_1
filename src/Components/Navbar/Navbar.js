@@ -51,7 +51,7 @@ class Navbar extends Component {
       <div className="row navbackground">
         <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 "></div>
         <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 ">
-          < button  onClick={this.onHandleClick}>Home</ button>
+          < button  onClick={this.onHandleClick} className="nsignup">Home</ button>
         </div>
 
          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
@@ -61,14 +61,14 @@ class Navbar extends Component {
          {sessionStorage.getItem('email')}
            </div>
 
-         <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 ">
-          < button hidden={this.state.visible}  onClick={this.onHandleClick_admin}>Admin</ button>
+         <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+          < button hidden={this.state.visible}  onClick={this.onHandleClick_admin} className="nsignup">Admin</ button>
           </div>
 
         
 
         <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 ">
-          < button  onClick={this.logout}>Logout</ button>
+          < button  onClick={this.logout} className="nsignup">Logout</ button>
         </div>
         <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 "></div>
       </div>

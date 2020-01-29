@@ -2,6 +2,7 @@ import React from "react";
 import ReactToPrint from "react-to-print";
 import axios from 'axios'
 import BrowserHistory from '../Utils/BrowserHistory';
+import '../css/Print.css';
 
 class ComponentToPrint extends React.Component {
 constructor(props) {
@@ -53,7 +54,7 @@ var premium=this.state.premium[this.state.index]
 
 
 return (
-<div>
+<div className="printurl">
 <div className="row">
 <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
 <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
