@@ -7,24 +7,23 @@ import '../css/Admin.css';
 
 
 class Admin extends Component {
-    
-    render() {
-        return (
-            <div className="url">
-             
-                <Navbar/>
-                <h1>Admin Portal</h1>
-            
-                <div className="admin_portal">
-                  <div><h2 className="vechile_heading">Vehicle Insurance</h2></div>
-                  <div><h2>Crop Insurance</h2></div>
-               <div ><Vehicle /></div> 
-              
-              <div><Crop/></div>
-            </div>
-             </div>
-        );
-    }
+
+  render() {
+    return (
+      <div className="adminscrol">
+      <div className="url">
+        <Navbar/>
+          <h1>Admin Portal</h1>
+          <div className="admin_portal">
+          <div><h2 className="vechile_heading">Vehicle Insurance</h2></div>
+          <div><h2>Crop Insurance</h2></div>
+          <div ><Vehicle /></div>
+          <div><Crop /></div>
+        </div>
+      </div>
+      </div>
+    );
+  }
 }
 
 export default Admin;

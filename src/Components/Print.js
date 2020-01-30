@@ -39,19 +39,17 @@ console.log(error);
 
 }
 
-onHandleClick() {
+onHandleClick(){
   BrowserHistory.push('/gen_inf');
 }
 
 render() {
+  
 var name=this.state.name[this.state.index]
 var cropname=this.state.cropname[this.state.index]
 var area=this.state.area[this.state.index]
 var price=this.state.price[this.state.index]
 var premium=this.state.premium[this.state.index]
-
-
-
 
 return (
 <div className="printurl">
@@ -63,7 +61,6 @@ return (
 <h1> Area:{area}</h1>
 <h1>Price:{price}</h1>
 <h1>Premium:{premium}</h1>
-
 </div>
 <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
 </div>

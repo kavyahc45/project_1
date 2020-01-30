@@ -11,14 +11,9 @@ class Checkoutform extends Component{
             <PaymentForm />
             </Elements>
           </div>
-        </StripeProvider>
-        </div>
-
-
+         </StripeProvider>
+       </div>
    )
-
-    }
-
-
+  }
 } 
 export default Checkoutform;

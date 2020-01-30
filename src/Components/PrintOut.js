@@ -5,18 +5,18 @@ import '../css/payment.css'
 
 
 class PrintOut extends Component {
-    render() {
-        const temp=sessionStorage.getItem('instype');
-        return (
-            <div className="printurl">
-                {
-                (temp==='Vehicle Insurance') ?
-                <Printvehl />:
-                <Print/>   
-            }
-            </div>
-        );
-    }
+  render() {
+    const temp = sessionStorage.getItem('instype');
+    return (
+      <div className="printurl">
+        {
+          (temp === 'Vehicle Insurance') ?
+            <Printvehl /> :
+            <Print />
+        }
+      </div>
+    );
+  }
 }
 
 export default PrintOut;

@@ -2,11 +2,12 @@
     display: grid;
     grid-template-columns: 773px 339px;
     justify-content: space-around;
-  
-
 }
 .vechile_heading{
     margin-left: -334px;
+}
+.search{
+  margin-left: -321px;
 }
 
 .url{
@@ -14,7 +15,13 @@
     border:solid 1px cornsilk;
   background-position: center;
   background-size: cover;
-  height: 700px;
+  height: 1000% ;
   width: 1300px;
   padding: 0;
+  /* scroll-margin-bottom: 100px; */
+  
   }
+  /* .adminscrol{
+   padding: 20%;
+  } */
+  

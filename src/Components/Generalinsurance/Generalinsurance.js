@@ -6,46 +6,44 @@ import logo from './imgdownlogo.png';
 
 
 class Generalinsurance extends Component {
-    state={
-        insurance:'Crop Insurance'
+  state = {
+    insurance: 'Crop Insurance'
+  }
+  handlechange = (event) => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
+  handleclick = () => {
+    sessionStorage.setItem('instype', this.state.insurance)
+    switch (this.state.insurance) {
+      case 'Crop Insurance': BrowserHistory.push('/crop')
+        break;
+      case 'Vehicle Insurance': BrowserHistory.push('/vehicle')
+        break;
     }
-    handlechange= (event) =>{
-        this.setState({[event.target.name]:event.target.value})
-    }
-    handleclick=()=>{
-        sessionStorage.setItem('instype',this.state.insurance)
-        switch(this.state.insurance){
-            case 'Crop Insurance': BrowserHistory.push('/crop')
-            break;
-            case 'Vehicle Insurance': BrowserHistory.push('/vehicle')
-            break;
-        }
-    }
+  }
 
-    onHandleClick(){
-        
-        BrowserHistory.push('/');
-            }
-    
+  onHandleClick() {
 
-    render() {
-        return (
-            <div className="background1">
-                <Navbar/>
-               
-                <img src={logo} className="logoimg1"></img>
-                <div>
-                <h1 className="Ins">General Insurance</h1>
-                 <select onChange={this.handlechange} name="insurance" className="crop">
-                     <option>Crop Insurance</option>
-                     <option>Vehicle Insurance</option>
-                 </select>
-                 <div className="sub"><button onClick={this.handleclick} className="sub"><b>Submit</b></button></div>
-                 </div>
-               
-            </div>
-        );
-    }
+    BrowserHistory.push('/');
+  }
+
+  render() {
+    return (
+      <div className="background1">
+        <Navbar />
+          <img src={logo} className="logoimg1"></img>
+           <div>
+             <h1 className="Ins">General Insurance</h1>
+             <select onChange={this.handlechange} name="insurance" className="crop">
+             <option>Select</option>
+             <option>Crop Insurance</option>
+             <option>Vehicle Insurance</option>
+             </select>
+            <div className="sub"><button onClick={this.handleclick} className="sub"><b>Submit</b></button></div>
+         </div>
+      </div>
+    );
+  }
 }
 
 export default Generalinsurance;

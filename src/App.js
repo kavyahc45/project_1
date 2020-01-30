@@ -28,8 +28,8 @@ function App() {
         <div className="App">
             <Router>
                 <switch>
-                    <Route exact path ='/' component={HomePage}></Route>
-                    <Route exact path='/signup' component={SignupPage}></Route>
+                     <Route exact path ='/' component={HomePage}></Route>
+                     <Route exact path='/signup' component={SignupPage}></Route>
                      <Route exact path='/Login' component={LoginForm}></Route>
                      <Route exact path='/confirmmail' component={ForgetPassword}></Route>
                      <PrivateRoute exact path='/admin' component={Admin}></PrivateRoute>

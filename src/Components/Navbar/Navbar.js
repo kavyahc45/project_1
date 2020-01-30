@@ -43,10 +43,7 @@ class Navbar extends Component {
     
   }
   
-
-  
-
-  render() {
+ render() {
     return (
       <div className="row navbackground">
         <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 "></div>
@@ -64,10 +61,7 @@ class Navbar extends Component {
          <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
           < button hidden={this.state.visible}  onClick={this.onHandleClick_admin} className="nsignup">Admin</ button>
           </div>
-
-        
-
-        <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 ">
+         <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 ">
           < button  onClick={this.logout} className="nsignup">Logout</ button>
         </div>
         <div className="col-xs-1 col-sm-1 col-md-1 col-lg-1 "></div>
