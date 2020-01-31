@@ -39,10 +39,9 @@ function App() {
                      <PrivateRoute exact path ='/checkoutform' component={Checkoutform}></PrivateRoute>
                      <PrivateRoute exact path='/print' component={Printout}></PrivateRoute>
                 </switch>
-            </Router>
-
-        </div>
-    );
-}
+              </Router>
+             </div>
+      );
+  }
 
 export default App;
